@@ -33,6 +33,8 @@
             (arg: string): Event[]
         }
     } = {};
+
+    const currentDay = new Date().toString().split(' ')[0];
 </script>
 
 
@@ -45,7 +47,7 @@
 	<div class='bg' style="background-image: url({ base }/bg.png)">
         <ul>
             {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
-            {#if idx !== 0}<li class='day-label'>{ day }</li>{/if}
+            {#if day !== currentDay}<li class='day-label'>{ day }</li>{/if}
             {#each events as event}
             <li>
                 <span class='event'>{ event.summary }</span>
@@ -97,7 +99,7 @@
         text-shadow: 0 1px white;
     }
     li span.time {
-        line-height: 43px;
+        line-height: 55px;
         font-size: 36px;
         margin-left: 20px; 
         margin-top: 0;
