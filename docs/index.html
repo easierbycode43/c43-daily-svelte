@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+
+		
+
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/start-9b630013.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/chunks/vendor-51cda2bb.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/__layout.svelte-c64dd940.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/index.svelte-34ec809d.js">
+		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/pages/__layout.svelte-ba9a01f9.css">
+
+		<script type="module">
+			import { start } from "/c43-daily-svelte/_app/start-9b630013.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/c43-daily-svelte","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/c43-daily-svelte/_app/pages/__layout.svelte-c64dd940.js"),
+						import("/c43-daily-svelte/_app/pages/index.svelte-34ec809d.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002F",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<main><h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+</main>
+
+
+
+			
+		</div>
+	</body>
+</html>
