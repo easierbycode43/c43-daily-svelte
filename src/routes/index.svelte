@@ -65,9 +65,6 @@
 
 
 <style>
-    section {
-        display: flex;
-    }
     ul {
         display: flex;
         flex-direction: column;
@@ -85,9 +82,9 @@
         justify-content: space-between;
         margin-bottom: 5px;
         min-width: 700px;
-        padding: 25px;
+        padding: 10px 25px;
         width: 40%;
-        background-color: rgba(255,255,255,0.65);
+        background-color: rgba(255,255,255,0.85);
     }
     li span.event {
         font-family: 'Open Sans Condensed';
@@ -109,7 +106,7 @@
         margin-top: 25px;
         text-transform: uppercase;
         text-shadow: 0 1px rgb(255 255 255 / 75%);
-        background-color: rgba(255, 255, 255, 0.65);
+        background-color: rgba(255, 255, 255, 0.85);
         border-radius: 6px 6px 0 0;
         line-height: 2;
         padding: 0 25px;

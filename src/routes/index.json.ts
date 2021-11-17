@@ -21,7 +21,7 @@ function listEvents(auth, done) {
     {
       calendarId: 'c_75qtobj06a3aj28nfut0mdjhdc@group.calendar.google.com',
       timeMin: (new Date()).toISOString(),
-      maxResults: 6,
+      maxResults: 4,
       singleEvents: true,
       orderBy: 'startTime',
     }, 
