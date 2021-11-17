@@ -4,19 +4,20 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
+		<title>C43 Events</title>
 
 		
 
-		<link rel="modulepreload" href="/c43-daily-svelte/_app/start-9b630013.js">
-		<link rel="modulepreload" href="/c43-daily-svelte/_app/chunks/vendor-51cda2bb.js">
-		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/__layout.svelte-c64dd940.js">
-		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/index.svelte-34ec809d.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/start-9f5758df.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/chunks/vendor-30d544eb.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/__layout.svelte-458ab7de.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/index.svelte-3e71cda9.js">
 		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/pages/__layout.svelte-ba9a01f9.css">
+		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/pages/index.svelte-49607d4e.css">
 
 		<script type="module">
-			import { start } from "/c43-daily-svelte/_app/start-9b630013.js";
+			import { start } from "/c43-daily-svelte/_app/start-9f5758df.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/c43-daily-svelte","assets":""},
@@ -29,8 +30,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/c43-daily-svelte/_app/pages/__layout.svelte-c64dd940.js"),
-						import("/c43-daily-svelte/_app/pages/index.svelte-34ec809d.js")
+						import("/c43-daily-svelte/_app/pages/__layout.svelte-458ab7de.js"),
+						import("/c43-daily-svelte/_app/pages/index.svelte-3e71cda9.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -46,13 +47,33 @@
 		<div id="svelte">
 
 
-<main><h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<main>
+
+
+<section class="svelte-1prp6z5"><div class="bg svelte-1prp6z5" style="background-image: url(/c43-daily-svelte/bg.png)"><ul class="svelte-1prp6z5">
+            <li class="svelte-1prp6z5"><span class="event svelte-1prp6z5">Music Skills coaching</span>
+                <span class="time svelte-1prp6z5">1:00 - 4:00</span>
+            </li><li class="day-label svelte-1prp6z5">Thu</li>
+            <li class="svelte-1prp6z5"><span class="event svelte-1prp6z5">Daily Walk</span>
+                <span class="time svelte-1prp6z5">9:30 - 9:45</span>
+            </li><li class="svelte-1prp6z5"><span class="event svelte-1prp6z5">Community Tech</span>
+                <span class="time svelte-1prp6z5">1:00 - 2:00</span>
+            </li><li class="svelte-1prp6z5"><span class="event svelte-1prp6z5">Clubhouse Orientation</span>
+                <span class="time svelte-1prp6z5">2:00 - 3:00</span>
+            </li><li class="svelte-1prp6z5"><span class="event svelte-1prp6z5">Music Performance Group</span>
+                <span class="time svelte-1prp6z5">3:00 - 4:30</span>
+            </li><li class="day-label svelte-1prp6z5">Fri</li>
+            <li class="svelte-1prp6z5"><span class="event svelte-1prp6z5">Cleaning Hour</span>
+                <span class="time svelte-1prp6z5">9:00 - 10:00</span>
+            </li></ul></div>
+
+    <h1 class="clock svelte-1prp6z5">3:55 PM</h1>
+</section>
 </main>
 
 
 
-			
+			<script type="application/json" data-type="svelte-data" data-url="index.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"eventsByDay\":{\"Wed\":[{\"end\":\"4:00\",\"start\":\"1:00\",\"summary\":\"Music Skills coaching\"}],\"Thu\":[{\"end\":\"9:45\",\"start\":\"9:30\",\"summary\":\"Daily Walk\"},{\"end\":\"2:00\",\"start\":\"1:00\",\"summary\":\"Community Tech\"},{\"end\":\"3:00\",\"start\":\"2:00\",\"summary\":\"Clubhouse Orientation\"},{\"end\":\"4:30\",\"start\":\"3:00\",\"summary\":\"Music Performance Group\"}],\"Fri\":[{\"end\":\"10:00\",\"start\":\"9:00\",\"summary\":\"Cleaning Hour\"}]}}"}</script>
 		</div>
 	</body>
 </html>
