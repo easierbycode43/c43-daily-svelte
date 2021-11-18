@@ -43,7 +43,7 @@
 </svelte:head>
 
 
-<section>
+<section style='display:flex'>
 	<div class='bg' style="background-image: url({ base }/bg.png)">
         <ul>
             {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
@@ -65,9 +65,6 @@
 
 
 <style>
-    section {
-        display: flex;
-    }
     ul {
         display: flex;
         flex-direction: column;
