@@ -65,6 +65,9 @@
 
 
 <style>
+    section {
+        display: flex;
+    }
     ul {
         display: flex;
         flex-direction: column;
