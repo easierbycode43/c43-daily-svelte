@@ -4,3 +4,5 @@ node_modules
 /.svelte-kit
 /package
 .env
+src/routes/credentials.json
+src/routes/token.json
