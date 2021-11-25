@@ -44,7 +44,7 @@
 
 
 <section style='display:flex'>
-	<div class='bg' style="background-image: url({ base }/bg.png); background-size: cover;">
+	<div class='bg'>
         <ul>
             {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
             {#if day !== currentDay}<li class='day-label'>{ day }</li>{/if}
