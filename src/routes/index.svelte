@@ -123,9 +123,6 @@
     .bg {
         background-size: cover; height: 100vh; min-width: 100%;
     }
-    .clock {
-        position:absolute;bottom: 25px;right: 25px;font-size: 96px;color: white;font-family: 'Open Sans Condensed';font-weight: 400;text-shadow: 2px 4px #47008b;margin-bottom: 0; white-space: nowrap;
-    }
 	.time {
 		font-family: monospace;
 	}
