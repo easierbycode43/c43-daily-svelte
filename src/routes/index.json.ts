@@ -46,6 +46,7 @@ function listEvents(auth, done) {
         arr.push({
           end: formatDate( value.end.dateTime || value.end.date ),
           start: formatDate( value.start.dateTime || value.start.date ),
+          startMs: Number( new Date( value.start.dateTime || value.start.date ) ),
           summary: value.summary
         })
       })

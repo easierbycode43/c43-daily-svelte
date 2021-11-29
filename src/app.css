@@ -11,3 +11,25 @@ body {
     min-height: 100vh;
     overflow: hidden;
 }
+
+.active {
+    animation-duration: 5s;
+    animation-name: pulse;
+    animation-iteration-count: 120;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    box-shadow: 1px 2px #003100;
+    color: #003100 !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}

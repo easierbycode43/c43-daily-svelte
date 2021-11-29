@@ -24,7 +24,8 @@
     
     interface Event {
         end: string, 
-        start: string, 
+        start: string,
+        startMs: number, 
         summary: string
     }
 
@@ -35,6 +36,9 @@
     } = {};
 
     const currentDay = new Date().toString().split(' ')[0];
+
+    $: currentMs = Date.now();
+    time.subscribe(val => currentMs=Number(val));
 </script>
 
 
@@ -47,9 +51,9 @@
 	<div class='bg'>
         <ul>
             {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
-            {#if day !== currentDay}<li class='day-label'>{ day }</li>{/if}
+            {#if day !== currentDay}<li class='day-label'>{ day }</li>{:else}<li class='day-label'>{formatter.format($time)}</li>{/if}
             {#each events as event}
-            <li>
+            <li class:active={(event.startMs - 30000) <= currentMs && (event.startMs + 30000) >= currentMs}>
                 <span class='event'>{ event.summary }</span>
                 <span class='time'>{ event.start } - { event.end }</span>
             </li>
@@ -58,9 +62,9 @@
         </ul>
 	</div>
 
-    <h1 class="clock">
+    <!-- <h1 class="clock">
         {formatter.format($time)}
-    </h1>
+    </h1> -->
 </section>
 
 
