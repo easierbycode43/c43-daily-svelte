@@ -14,7 +14,7 @@
 
 <script type='ts'>
     import { time } from './stores';
-    import base from '../lib/base';
+    import UpNext from './upnext.svelte';
 
     const formatter = new Intl.DateTimeFormat('en', {
         hour12: true,
@@ -58,8 +58,14 @@
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
             class:hidden={event.endMs <= currentMs}
         >
-            {#if event.startMs <= currentMs && event.endMs >= currentMs}
-            <span class='green-dot'></span>
+
+            {#if 
+                event.startMs > currentMs && 
+                (event.startMs - 270000) >= currentMs && 
+                (event.startMs - 601000) >= currentMs &&
+                day === currentDay
+            }
+            <UpNext />
             {/if}
             
             <span class='event'>{ event.summary }</span>
@@ -75,16 +81,6 @@
     section {
         display: flex; 
         flex-direction: column;
-    }
-
-    .green-dot {
-        height: 10px;
-        width: 10px;
-        position: absolute;
-        background-color: #1e8e3e;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        top: 32.5px;
     }
 
     ul {
@@ -105,14 +101,13 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 10px;
-        min-width: 700px;
+        min-width: 725px;
         padding: 10px 25px;
-        position: relative;
         width: 40%;
         background-color: rgba(255,255,255,0.85);
     }
-    li.active span.event {
-        margin-left: 20px;
+    li.active {
+        position: relative;
     }
     li.hidden {
         display: none;
