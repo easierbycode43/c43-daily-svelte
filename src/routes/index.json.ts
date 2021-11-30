@@ -22,7 +22,7 @@ function listEvents(auth, done) {
       // calendarId: 'c_75qtobj06a3aj28nfut0mdjhdc@group.calendar.google.com',
       calendarId: 'c_qsb1jc6cf0p3to0b99on7arf9g@group.calendar.google.com',
       timeMin: (new Date()).toISOString(),
-      maxResults: 7,
+      maxResults: 10,
       singleEvents: true,
       orderBy: 'startTime',
     }, 
@@ -45,6 +45,7 @@ function listEvents(auth, done) {
 
         arr.push({
           end: formatDate( value.end.dateTime || value.end.date ),
+          endMs: Number( new Date( value.end.dateTime || value.end.date ) ),
           start: formatDate( value.start.dateTime || value.start.date ),
           startMs: Number( new Date( value.start.dateTime || value.start.date ) ),
           summary: value.summary

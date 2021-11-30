@@ -24,6 +24,7 @@
     
     interface Event {
         end: string, 
+        endMs: number, 
         start: string,
         startMs: number, 
         summary: string
@@ -53,7 +54,21 @@
             {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
             {#if day !== currentDay}<li class='day-label'>{ day }</li>{:else}<li class='day-label'>{formatter.format($time)}</li>{/if}
             {#each events as event}
-            <li class:active={(event.startMs - 30000) <= currentMs && (event.startMs + 30000) >= currentMs}>
+            <li
+                class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
+                class:active={event.startMs <= currentMs && event.endMs >= currentMs}
+            >
+                {#if event.startMs <= currentMs && event.endMs >= currentMs}
+                <span style="
+                height: 10px;
+                width: 10px;
+                position: absolute;
+                background-color: #1e8e3e;
+                border-radius: 50%;
+                border: 1px solid #fff;
+                top: 32.5px;
+                "></span>
+                {/if}
                 <span class='event'>{ event.summary }</span>
                 <span class='time'>{ event.start } - { event.end }</span>
             </li>
@@ -84,9 +99,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         min-width: 700px;
         padding: 10px 25px;
+        position: relative;
         width: 40%;
         background-color: rgba(255,255,255,0.85);
     }
@@ -106,6 +122,11 @@
         margin-top: 0;
         text-shadow: 0 1px white;
     }
+    li span.event, li span.time {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
     li.day-label {
         margin-top: 25px;
         text-transform: uppercase;
@@ -118,6 +139,8 @@
         width: auto;
         margin-bottom: 0;
         box-shadow: none;
+        font-family: monospace;
+        font-size: 18px;
     }
 
     .bg {

@@ -13,13 +13,16 @@ body {
 }
 
 .active {
+    box-shadow: 0 2px #1e8e3e !important;
+    color: #169748 !important;
+}
+
+.starting {
     animation-duration: 5s;
     animation-name: pulse;
-    animation-iteration-count: 120;
+    animation-iteration-count: 180;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    box-shadow: 1px 2px #003100;
-    color: #003100 !important;
 }
 
 @keyframes pulse {
