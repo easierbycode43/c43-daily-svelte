@@ -56,6 +56,7 @@
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
+            class:hidden={event.endMs <= currentMs}
         >
             {#if event.startMs <= currentMs && event.endMs >= currentMs}
             <span class='green-dot'></span>
@@ -67,10 +68,6 @@
         {/each}
         {/each}
     </ul>
-
-    <!-- <h1 class="clock">
-        {formatter.format($time)}
-    </h1> -->
 </section>
 
 
@@ -116,6 +113,9 @@
     }
     li.active span.event {
         margin-left: 20px;
+    }
+    li.hidden {
+        display: none;
     }
     li span.event {
         font-family: 'Open Sans Condensed';
