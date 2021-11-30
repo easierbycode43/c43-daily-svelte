@@ -151,6 +151,9 @@
         font-family: monospace;
         font-size: 18px;
     }
+    li.active span {
+        text-shadow: 0 1px #004e00;
+    }
 
 	.time {
 		font-family: monospace;

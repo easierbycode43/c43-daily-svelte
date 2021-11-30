@@ -15,7 +15,8 @@ body {
 
 .active {
     box-shadow: 0 2px #1e8e3e !important;
-    color: #169748 !important;
+    color: #fff !important;
+    background-color: #169748 !important;
 }
 
 .starting {
