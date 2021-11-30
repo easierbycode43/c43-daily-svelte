@@ -51,7 +51,7 @@
 <section>
     <ul>
         {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
-        {#if day !== currentDay}<li class='day-label'>{ day }</li>{:else}<li class='day-label'>{formatter.format($time)}</li>{/if}
+        <li class='day-label'>{#if day !== currentDay}{ day }{:else}{formatter.format($time)}{/if}</li>
         {#each events as event}
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
