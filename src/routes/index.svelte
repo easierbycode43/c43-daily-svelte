@@ -15,6 +15,43 @@
 <script type='ts'>
     import { time } from './stores';
     import UpNext from './upnext.svelte';
+    import { onMount } from 'svelte';
+
+    let ArcadePhysics, Game, Scene, Sprite;
+	let Phaser;
+    let mounted = false;
+    let velocityX = 25;
+    let velocityY = -10;
+    let santa;
+
+	onMount(async () => {
+		const module = await import('phaser');
+		Phaser = module.default;
+		const module2 = await import('svelte-phaser');
+        ({ArcadePhysics, Game, Scene, Sprite} = module2);
+        mounted = true;
+        // Phaser.Physics.Arcade.World.wrap( santa );
+	});
+
+    function preload( scene ) {
+        scene.load.spritesheet(
+            'santa',
+            '/santa.png',
+            {
+                frameWidth: 91,
+                frameHeight: 37
+            }
+        )
+    }
+
+    function create( scene ) {
+        scene.anims.create({
+            key: 'santa/default',
+            frames: scene.anims.generateFrameNumbers('santa'),
+            frameRate: 20,
+            repeat: -1
+        })
+    }
 
     const formatter = new Intl.DateTimeFormat('en', {
         hour12: true,
@@ -77,7 +114,30 @@
 </section>
 
 
+{#if mounted}
+<Game 
+    width={400} 
+    height={400} 
+    render={{pixelArt: true, transparent: true}}
+    physics={{default: 'arcade'}}
+>
+    <Scene key="main" {preload} {create}>
+        <Sprite instance={santa} name='santa' x={-91} y={250} animation='santa/default'>
+            <ArcadePhysics {velocityX} {velocityY} />
+        </Sprite>
+    </Scene>
+</Game>
+{/if}
+
+
 <style>
+    :global(canvas) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
     section {
         display: flex; 
         flex-direction: column;
