@@ -1,3 +1,0 @@
-import{S as f,i as x,s as y,e as p,t as _,c as h,a as d,g as m,d as r,b as u,f as E,H as c,I as o}from"../chunks/vendor-eb8595ac.js";function S(v){let e,l,t,n;return{c(){e=p("span"),l=_(`\u279C
-    `),t=p("small"),n=_("NEXT"),this.h()},l(s){e=h(s,"SPAN",{class:!0});var a=d(e);l=m(a,`\u279C
-    `),t=h(a,"SMALL",{class:!0});var i=d(t);n=m(i,"NEXT"),i.forEach(r),a.forEach(r),this.h()},h(){u(t,"class","svelte-7pxntl"),u(e,"class","active svelte-7pxntl")},m(s,a){E(s,e,a),c(e,l),c(e,t),c(t,n)},p:o,i:o,o,d(s){s&&r(e)}}}class N extends f{constructor(e){super();x(this,e,null,S,y,{})}}export{N as default};

@@ -11,7 +11,9 @@
     }
     span {
         font-size: 40px;
-        display: flex;
+        /* DRJ:HACK - hiding till layout is pretty */
+        /* display: flex; */
+        display: none;
         flex-direction: column;
         line-height: 27.5px;
         left: 15%;
