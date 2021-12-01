@@ -1,0 +1,3 @@
+import{S as x,i as v,s as y,e as p,t as _,c as d,a as h,g as m,d as r,b as f,f as E,H as c,I as o}from"../chunks/vendor-cf1efd55.js";function S(u){let e,l,t,n;return{c(){e=p("span"),l=_(`\u279C
+    `),t=p("small"),n=_("NEXT"),this.h()},l(s){e=d(s,"SPAN",{class:!0});var a=h(e);l=m(a,`\u279C
+    `),t=d(a,"SMALL",{class:!0});var i=h(t);n=m(i,"NEXT"),i.forEach(r),a.forEach(r),this.h()},h(){f(t,"class","svelte-tx90x8"),f(e,"class","active svelte-tx90x8")},m(s,a){E(s,e,a),c(e,l),c(e,t),c(t,n)},p:o,i:o,o,d(s){s&&r(e)}}}class N extends x{constructor(e){super();v(this,e,null,S,y,{})}}export{N as default};

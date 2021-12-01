@@ -23,7 +23,9 @@
     let mounted = false;
     let velocityX = 25;
     let velocityY = -10;
-    let santa;
+    let santa: Phaser.GameObjects.Sprite;
+    let santaIntroComplete = false;
+    let scene: Phaser.Scene;
 
 	onMount(async () => {
 		const module = await import('phaser');
@@ -31,12 +33,24 @@
 		const module2 = await import('svelte-phaser');
         ({ArcadePhysics, Game, Scene, Sprite} = module2);
         mounted = true;
+        
+        // SANTA
         // Phaser.Physics.Arcade.World.wrap( santa );
+        // DRJ:HACK - hide game after 25s (temp fix for flicker issue)
+        setTimeout(
+            () => {
+                scene.time.addEvent({
+                    delay: 25000,
+                    callback: () => {
+                        santaIntroComplete = true;
+                    }
+                })
+            },
+            1000
+        )
 	});
 
     let santaSpriteUrl = `${base}/santa.png`;
-
-    console.log({ santaSpriteUrl });
 
     function preload( scene ) {
         scene.load.spritesheet(
@@ -49,7 +63,7 @@
         )
     }
 
-    function create( scene ) {
+    function create( scene: Phaser.Scene ) {
         scene.anims.create({
             key: 'santa/default',
             frames: scene.anims.generateFrameNumbers('santa'),
@@ -119,15 +133,15 @@
 </section>
 
 
-{#if mounted}
+{#if mounted && !santaIntroComplete}
 <Game 
     width={400} 
     height={400} 
     render={{pixelArt: true, transparent: true}}
     physics={{default: 'arcade'}}
 >
-    <Scene key="main" {preload} {create}>
-        <Sprite instance={santa} name='santa' x={-91} y={250} animation='santa/default'>
+    <Scene key="main" {preload} {create} bind:instance={scene}>
+        <Sprite bind:instance={santa} name='santa' x={-91} y={250} animation='santa/default'>
             <ArcadePhysics {velocityX} {velocityY} />
         </Sprite>
     </Scene>
