@@ -16,6 +16,7 @@
     import { time } from './stores';
     import UpNext from './upnext.svelte';
     import { onMount } from 'svelte';
+    import base from '../lib/base';
 
     let ArcadePhysics, Game, Scene, Sprite;
 	let Phaser;
@@ -36,7 +37,7 @@
     function preload( scene ) {
         scene.load.spritesheet(
             'santa',
-            '/santa.png',
+            `${base}/santa.png`,
             {
                 frameWidth: 91,
                 frameHeight: 37
