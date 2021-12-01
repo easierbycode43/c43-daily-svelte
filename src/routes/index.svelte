@@ -16,6 +16,7 @@
     import { time } from './stores';
     import UpNext from './upnext.svelte';
     import { onMount } from 'svelte';
+    import base from '../lib/base';
 
     let ArcadePhysics, Game, Scene, Sprite;
 	let Phaser;
@@ -33,10 +34,14 @@
         // Phaser.Physics.Arcade.World.wrap( santa );
 	});
 
+    let santaSpriteUrl = `${base}/santa.png`;
+
+    console.log({ santaSpriteUrl });
+
     function preload( scene ) {
         scene.load.spritesheet(
             'santa',
-            '/santa.png',
+            santaSpriteUrl,
             {
                 frameWidth: 91,
                 frameHeight: 37
