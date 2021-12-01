@@ -34,10 +34,14 @@
         // Phaser.Physics.Arcade.World.wrap( santa );
 	});
 
+    let santaSpriteUrl = `${base}/santa.png`;
+
+    console.log({ santaSpriteUrl });
+
     function preload( scene ) {
         scene.load.spritesheet(
             'santa',
-            `${base}/santa.png`,
+            santaSpriteUrl,
             {
                 frameWidth: 91,
                 frameHeight: 37
