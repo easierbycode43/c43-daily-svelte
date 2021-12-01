@@ -11,12 +11,10 @@
     }
     span {
         font-size: 40px;
-        /* DRJ:HACK - hiding till layout is pretty */
-        /* display: flex; */
-        display: none;
+        display: flex;
         flex-direction: column;
         line-height: 27.5px;
-        left: 15%;
+        left: calc((100vw / 2) - (362px + 115px));
         position: relative;
         border-radius: 25%;
         text-align: center;

@@ -115,11 +115,10 @@
             class:hidden={event.endMs <= currentMs}
         >
 
+            <!-- if less than an hour away, show UpNext -->
             {#if 
                 event.startMs > currentMs && 
-                (event.startMs - 270000) >= currentMs && 
-                (event.startMs - 601000) >= currentMs &&
-                day === currentDay
+                event.startMs <= ( currentMs + (((60*60) * 1000)*1) )
             }
             <UpNext />
             {/if}
@@ -175,7 +174,8 @@
     li {
         border-radius: 6px;
         box-shadow: 0 1px #47008b;
-        color: #140058;
+        /* color: #140058; */
+        color: #472187;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
