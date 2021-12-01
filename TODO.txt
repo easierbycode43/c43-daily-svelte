@@ -1,0 +1,8 @@
+NOW
+===
+- add Lunch to calendar list
+  - at 10 till noon, show lunch menu (in modal?)
+
+
+LATER
+=====
