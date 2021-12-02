@@ -115,10 +115,10 @@
             class:hidden={event.endMs <= currentMs}
         >
 
-            <!-- if less than an hour away, show UpNext -->
+            <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
             {#if 
-                event.startMs > currentMs && 
-                event.startMs <= ( currentMs + (((60*60) * 1000)*1) )
+                event.startMs > ( currentMs + ((10*60) * 1000) ) && 
+                event.startMs <= ( currentMs + ((50*60) * 1000) )
             }
             <UpNext />
             {/if}
