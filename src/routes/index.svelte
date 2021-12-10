@@ -253,7 +253,7 @@
         text-shadow: 0 1px black;
     }
     li.flair span.time {
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.25);
         border-radius: 6px;
         box-shadow: rgb(0, 0, 0 / 45%);
         padding: 0 7px;
