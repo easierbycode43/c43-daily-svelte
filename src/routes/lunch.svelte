@@ -64,7 +64,7 @@
         width: 40%;
         background-color: rgba(255,255,255,0.85);
     }
-    li.active {
+    /* li.active {
         position: relative;
     }
     li.hidden {
@@ -110,5 +110,5 @@
 
 	.time {
 		font-family: monospace;
-	}
+	} */
 </style>

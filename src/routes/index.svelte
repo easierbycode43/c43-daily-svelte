@@ -17,6 +17,8 @@
     import UpNext from './upnext.svelte';
     import { onMount } from 'svelte';
     import base from '../lib/base';
+    import Joinmeet from './joinmeet.svelte';
+    import getFlairUrl from '../lib/flair';
 
     let ArcadePhysics, Game, Scene, Sprite;
 	let Phaser;
@@ -33,6 +35,8 @@
 		const module2 = await import('svelte-phaser');
         ({ArcadePhysics, Game, Scene, Sprite} = module2);
         mounted = true;
+
+        // TV_MODE = new URL(window.location.href).searchParams.get('mode') == 'TV';
         
         // SANTA
         // Phaser.Physics.Arcade.World.wrap( santa );
@@ -83,7 +87,8 @@
         endMs: number, 
         start: string,
         startMs: number, 
-        summary: string
+        summary: string,
+        hangoutLink: string | null
     }
 
     export let data: {
@@ -109,6 +114,36 @@
         {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
         <li class='day-label'>{#if day !== currentDay}{ day }{:else}{formatter.format($time)}{/if}</li>
         {#each events as event}
+        {#if getFlairUrl(event.summary) !== null}
+        <li
+            class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
+            class:active={event.startMs <= currentMs && event.endMs >= currentMs}
+            class:hidden={event.endMs <= currentMs}
+            style='background: url({getFlairUrl(event.summary)}); background-size: cover; background-position-y: center;'
+            class='flair'
+        >
+            <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
+            {#if 
+                event.startMs > ( currentMs + ((10*60) * 1000) ) && 
+                event.startMs <= ( currentMs + ((50*60) * 1000) )
+            }
+            <UpNext />
+            {/if}
+            
+            <span
+                class='event'
+            >
+                { event.summary }
+            </span>
+            
+            <span class='time'>{ event.start } - { event.end }</span>
+
+            <!-- if Google Meet link, AND *not* TV_MODE, show join button -->
+            {#if event.hangoutLink}
+            <Joinmeet />
+            {/if}
+        </li>
+        {:else}
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
@@ -123,9 +158,20 @@
             <UpNext />
             {/if}
             
-            <span class='event'>{ event.summary }</span>
+            <span
+                class='event'
+            >
+                { event.summary }
+            </span>
+            
             <span class='time'>{ event.start } - { event.end }</span>
+
+            <!-- if Google Meet link, AND *not* TV_MODE, show join button -->
+            {#if event.hangoutLink}
+            <Joinmeet />
+            {/if}
         </li>
+        {/if}
         {/each}
         {/each}
     </ul>
@@ -185,9 +231,6 @@
         width: 40%;
         background-color: rgba(255,255,255,0.85);
     }
-    li.active {
-        position: relative;
-    }
     li.hidden {
         display: none;
     }
@@ -204,6 +247,10 @@
         font-size: 36px;
         margin-top: 0;
         text-shadow: 0 1px white;
+    }
+    li.flair span.event, li.flair span.time {
+        color: white;
+        text-shadow: 0 1px black;
     }
     li span.event, li span.time {
         white-space: nowrap;

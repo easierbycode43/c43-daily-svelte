@@ -49,7 +49,8 @@ function listEvents(auth, done) {
           endMs: Number( new Date( value.end.dateTime || value.end.date ) ),
           start: formatDate( value.start.dateTime || value.start.date ),
           startMs: Number( new Date( value.start.dateTime || value.start.date ) ),
-          summary: value.summary
+          summary: value.summary,
+          hangoutLink: value.hangoutLink || null
         })
       })
 
