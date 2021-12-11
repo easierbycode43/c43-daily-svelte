@@ -12,7 +12,6 @@
     }
 </script>
 
-
 <script type='ts'>
 
     export let data;
@@ -29,11 +28,7 @@
     // }
     let inlineObjects;
 
-    function formatData( dataObj ) {
-        ({ inlineObjects } = dataObj);
-        console.log( dataObj );
-        return JSON.stringify( dataObj );
-    }
+    ({ inlineObjects } = data);
 
     // element: {inlineObjectElement?, textRun}
     function formatElement( element ) {
@@ -41,60 +36,39 @@
         if ( element.inlineObjectElement ) {
             let { inlineObjectElement } = element;
 
-            // return JSON.stringify(
-            //     inlineObjects[ inlineObjectElement.inlineObjectId ]
-            //         .inlineObjectProperties
-            //         .embeddedObject
-            //         .imageProperties
-            //         .contentUri
-            // );
-
             
             let { contentUri } = inlineObjects[ inlineObjectElement.inlineObjectId ]
                 .inlineObjectProperties
                 .embeddedObject
                 .imageProperties;
 
-            // return contentUri;
             return `
-            <h2 style='margin-bottom: 0;'><img src='${contentUri}' alt='ICON' height='192' /></h2>
-            <h2>${data.title}</h2>
+            <h2 class='icon'><img src='${contentUri}' alt='ICON' height='192' style='border-radius: 50%;' /></h2>
+            <h2 class='title'>${data.title}</h2>
             `;
         }
 
-        // return JSON.stringify( element.textRun.content );
-        // return element.textRun.content;
-        return `<span style='color: #3e3e3e; line-height: 28px;'>${element.textRun.content}</span>`;
+        return `<span class='content'>${element.textRun.content}</span>`;
     }
 </script>
 
 
-<pre style='display: none;'>
-    {formatData(data)}
-</pre>
-
 <section id='wrpr'>
-<section style='align-items: center; display: flex; flex-direction: column; width: 35%;'>
+<section class='spotlight'>
 {#each data.body.content as contentItem}
     
     <!-- if contentItem has paragraph display it's text / image -->
     {#if contentItem.paragraph}
-    <!-- <p>{ formatData(contentItem.paragraph) }</p> -->
-
     <!-- paragraph: { elements: [{}, {}] } -->
     {#each contentItem.paragraph.elements as element}
 
     <!-- element: {inlineObjectElement?, textRun} -->
     {#if element.inlineObjectElement || (element.textRun && element.textRun.content !== "\n")}
-    <!-- <p>{ formatElement( element ) }</p> -->
     {@html formatElement( element ) }
     {/if}
 
     {/each}
-
     {/if}
-
-    <!-- <p>{ formatData(contentItem) }</p> -->
 {/each}
 </section>
 </section>
@@ -105,5 +79,26 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .spotlight {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        padding: 0 0.83em 0.83em;
+        background-color: rgba(0, 0, 0, 0.55);
+        border-radius: 6px;
+        color: #fafcfe;
+    }
+
+    :global(h2.icon, h2.title) {
+        margin-bottom: 0;
+    }
+
+    :global(.spotlight .content) {
+        line-height: 28px;
+        text-align: center;
+        text-shadow: 0 1px rgb(0 0 0 / 65%);
     }
 </style>
