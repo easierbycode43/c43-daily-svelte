@@ -4,9 +4,13 @@
         const res = await fetch( 'index.json' );
         const data = await res.json();
 
+        const res2 = await fetch( 'morningrecap.json' );
+        const data2 = await res2.json();
+
         return {
             props: {
-                data
+                data,
+                data2
             }
         }
     }
@@ -29,7 +33,14 @@
     let santaIntroComplete = false;
     let scene: Phaser.Scene;
 
-	onMount(async () => {
+    let TV_MODE = false;
+    
+    onMount(async () => {
+        
+        TV_MODE = new URL(window.location.href).searchParams.get('mode') == 'TV';
+
+        if ( !TV_MODE )  document.body.style.background = "unset";
+
 		const module = await import('phaser');
 		Phaser = module.default;
 		const module2 = await import('svelte-phaser');
@@ -97,10 +108,38 @@
         }
     } = {};
 
+    export let data2;
+
+    let inlineObjects;
+
+    ({ inlineObjects } = data2);
+
+    const dt = new Date();
+
+    const currentDate = `${dt.getMonth() + 1}/${dt.getDate()}`;
+
     const currentDay = new Date().toString().split(' ')[0];
 
     $: currentMs = Date.now();
     time.subscribe(val => currentMs=Number(val));
+
+    // element: {inlineObjectElement?, textRun}
+    function formatElement( element ) {
+        
+        if ( element.inlineObjectElement ) {
+            let { inlineObjectElement } = element;
+
+            
+            let { contentUri } = inlineObjects[ inlineObjectElement.inlineObjectId ]
+                .inlineObjectProperties
+                .embeddedObject
+                .imageProperties;
+
+            return `<img src='${contentUri}' height='192' /></h2>`;
+        }
+
+        return `<span>${element.textRun.content}</span>`;
+    }
 </script>
 
 
@@ -110,22 +149,52 @@
 
 
 <section>
+
+    {#if !TV_MODE}
+    <div class='date-notes'>
+        <!-- date header -->
+        <p class='date-header'>{currentDate} • {formatter.format($time)}</p>
+
+        <!-- notes -->
+        <p class='notes-header'>NOTES</p>
+
+        <p class='notes'>
+            {#each data2.body.content as contentItem}
+    
+                <!-- if contentItem has paragraph display it's text / image -->
+                {#if contentItem.paragraph}
+                <!-- paragraph: { elements: [{}, {}] } -->
+                {#each contentItem.paragraph.elements as element}
+
+                <!-- element: {inlineObjectElement?, textRun} -->
+                {#if element.inlineObjectElement || (element.textRun && element.textRun.content !== "\n")}
+                {@html formatElement( element ) }
+                {/if}
+
+                {/each}
+                {/if}
+            {/each}
+        </p>
+    </div>
+    {/if}
+
     <ul>
         {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
-        <li class='day-label'>{#if day !== currentDay}{ day }{:else}{formatter.format($time)}{/if}</li>
+        {#if TV_MODE}<li class='day-label'>{#if day !== currentDay}{ day }{:else}{formatter.format($time)}{/if}</li>{/if}
         {#each events as event}
         {#if getFlairUrl(event.summary) !== null}
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
-            class:hidden={event.endMs <= currentMs}
+            class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
             style='background: url({getFlairUrl(event.summary)}); background-size: cover; background-position-y: center;'
             class='flair'
         >
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
             {#if 
                 event.startMs > ( currentMs + ((10*60) * 1000) ) && 
-                event.startMs <= ( currentMs + ((50*60) * 1000) )
+                event.startMs <= ( currentMs + ((50*60) * 1000) ) &&
+                TV_MODE
             }
             <UpNext />
             {/if}
@@ -147,13 +216,14 @@
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
-            class:hidden={event.endMs <= currentMs}
+            class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
         >
 
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
             {#if 
                 event.startMs > ( currentMs + ((10*60) * 1000) ) && 
-                event.startMs <= ( currentMs + ((50*60) * 1000) )
+                event.startMs <= ( currentMs + ((50*60) * 1000) ) &&
+                TV_MODE
             }
             <UpNext />
             {/if}
@@ -195,6 +265,33 @@
 
 
 <style>
+
+    .notes {
+        padding-top: 10pt;
+        margin-left: 36pt;
+    }
+
+    .date-notes {
+        background-color: #5d3a37;
+        color: white;
+        padding: 0 25px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        margin-top: 1em;
+        text-shadow: 0 1px black;
+    }
+
+    .date-header {
+        font-family: 'monospace';
+        font-size: 36pt;
+        margin: 0.5em 0;
+    }
+
+    .notes-header {
+        font-size: 14pt;
+        margin-bottom: 0.67em;
+    }
+
     :global(canvas) {
         position: absolute;
         width: 100%;
@@ -203,6 +300,7 @@
     }
 
     section {
+        align-items: center;
         display: flex; 
         flex-direction: column;
     }
