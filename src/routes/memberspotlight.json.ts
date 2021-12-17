@@ -1,5 +1,5 @@
 
-import { google as google$1 } from 'googleapis';
+import { docs_v1, google as google$1 } from 'googleapis';
 import credentials from './credentials.json';
 import token from './token-docs.json';
 
@@ -19,114 +19,52 @@ function formatDate( str ) {
  function getTestimonialDocuments( auth, done ) {
 
     let DOCUMENT_IDS = [
-        // '1iSaPAq7ZWrb3OZDetBK59Rm8GWnbrQNLtmtoeNnBpTI'
-        '1OqV22UO8N2jgzQRerExx1vDkMFNVB46iV1dUNHo2An8'
+      '1Os7hIb2AEZ0l0gA53zNFAixQ8y5knDWwVHs_jXxQ0n4',
+      '1lQD9K7_MS6Mtf43aYEPs9K2fQz4Ga0J4EtKhB5MsrGI',
+      '1l56Z_QM6N4PU2x_uW4ZTs4UTkWhlbprO_0-_qS_YlAU',
+      '1IH1HzPQtJL-egQen3uRMlr4g295d5C2tGGNntTkY6EM',
+      '1hcO5wtILeqzFwIly39M6XFdeCXwRa0bTXM7XtFbGmcY',
+      '1iaPQDtRx7iZ07M_3N96SrsMv9G_Bmz4eE5XdmRo5jOY',
+      '1Nv1_Ab4QYViz0b2HTHvIJfQE7cjaphipBdNxi7Uwji0',
+      '1jwFLsXq_3CaT8mH9Wp7eDJhvUoAswPe7iztinS7IYIw'
     ];
 
     const doc = google$1.docs({ version: 'v1', auth });
 
     let responseArr: [
       {
-        title: string,
-        body: object,
-        documentStyle: object,
-        namedStyles: object,
-        lists: object,
-        revisionId: string,
-        suggestionsViewMode: string,
-        positionedObjects: object,
-        documentId: string
+        title?: string,
+        body?: object,
+        documentStyle?: object,
+        namedStyles?: object,
+        lists?: object,
+        revisionId?: string,
+        suggestionsViewMode?: string,
+        positionedObjects?: object,
+        documentId?: string
       }
-    ] | [] = [];
-    [ DOCUMENT_IDS ].forEach( ( documentId, idx ) => {
-    doc.documents.get(
-        {
-            documentId: DOCUMENT_IDS[idx]
-        },
-        
-        ( err, res ) => {
-            
-          if (err) {
-            console.log({ err });
-            return done({ body: { err } });
-          }
-
-          // res.data.items.forEach((value, index, array) => {
-          //   // format each document in the response
-
-          //   // add to response array
-          //   // responseArr.push( value )
-          // })
-
-          console.log({ res });
-          // {
-          //   res: {
-          //     config: {
-          //       url: 'https://docs.googleapis.com/v1/documents/1iSaPAq7ZWrb3OZDetBK59Rm8GWnbrQNLtmtoeNnBpTI',
-          //       method: 'GET',
-          //       userAgentDirectives: [Array],
-          //       paramsSerializer: [Function (anonymous)],
-          //       headers: [Object],
-          //       params: {},
-          //       validateStatus: [Function (anonymous)],
-          //       retry: true,
-          //       responseType: 'json'
-          //     },
-          //     data: {
-          //       title: 'Freddy Krueger: Most prolific killer',
-          //       body: [Object],
-          //       documentStyle: [Object],
-          //       namedStyles: [Object],
-          //       lists: [Object],
-          //       revisionId: 'ALm37BXmNGfUfJQF6vPaMzl-chfruQbRIwEZ5y6D1h7EJ340U8A2G3dhLhp7pgrSW-o_BaoK8CPrRkmK1Z09gw',
-          //       suggestionsViewMode: 'SUGGESTIONS_INLINE',
-          //       positionedObjects: [Object],
-          //       documentId: '1iSaPAq7ZWrb3OZDetBK59Rm8GWnbrQNLtmtoeNnBpTI'
-          //     },
-          //     headers: {
-          //       'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"',
-          //       'cache-control': 'private',
-          //       connection: 'close',
-          //       'content-encoding': 'gzip',
-          //       'content-type': 'application/json; charset=UTF-8',
-          //       date: 'Fri, 10 Dec 2021 22:41:24 GMT',
-          //       server: 'ESF',
-          //       'transfer-encoding': 'chunked',
-          //       vary: 'Origin, X-Origin, Referer',
-          //       'x-content-type-options': 'nosniff',
-          //       'x-frame-options': 'SAMEORIGIN',
-          //       'x-xss-protection': '0'
-          //     },
-          //     status: 200,
-          //     statusText: 'OK',
-          //     request: {
-          //       responseURL: 'https://docs.googleapis.com/v1/documents/1iSaPAq7ZWrb3OZDetBK59Rm8GWnbrQNLtmtoeNnBpTI'
-          //     }
-          //   }
-          // }
-
-          // done({
-          //   body: {
-          //     responseArr
-          //   }
-          // })
-          done({
-            body: res.data
-          })
-        })
-    })
-
+    ] | any[] = [];
     
-  
-    // done({
-    //     body: [
-    //         {
-    //             "icon": "http://res.cloudinary.com/hud9ala09/image/upload/v1537917316/oukaemdpve3dx7uiwozd.jpg",
-    //             "name": "Kim",
-    //             "summary": "Kimberly's life was turned upside-down after a severe accident injured her daughters. Thanks to Fresh Start, she found the confidence to go back to school and start a new career."
-    //         }
-    //     ]
-    // })
+    let $docPromises: Promise<docs_v1.Schema$Document>[] = [];
+
+    for ( let documentId of DOCUMENT_IDS ) {
+      let docPromise = doc.documents.get(
+        {
+            documentId
+        }
+      );
+
+      $docPromises.push( docPromise );
+    }
+
+    Promise.all( $docPromises ).then(
+      ( documentArray ) => {
+        done({
+          body: documentArray
+        })
+      },
+      () => {}
+    )
 
 }
 
