@@ -75,7 +75,7 @@
     }
 </script>
 
-<iframe src='/c43' title='C43' style='border-width: 0; height: 100vh; position: absolute; top: 0; width: 100%;'></iframe>
+<iframe src='./c43' title='C43' style='border-width: 0; height: 100vh; position: absolute; top: 0; width: 100%;'></iframe>
 
 <section id='wrpr'>
 {#each data as d, idx}
@@ -107,7 +107,6 @@
 
 :global(body) {
   background: unset;
-  overflow-y: scroll !important;
 }
 
 $radius: 25px;

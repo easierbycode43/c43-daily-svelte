@@ -187,7 +187,7 @@
 
 .ground {
     position: relative;
-    width: 65%;
+    width: 650px;
     height: 100vh;
     transform: rotateX(90deg);
     transform-style: preserve-3d;
