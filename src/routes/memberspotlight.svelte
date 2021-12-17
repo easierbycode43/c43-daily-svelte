@@ -15,7 +15,21 @@
 <script type='ts'>
 
     import base from '../lib/base';
+    import { fly } from 'svelte/transition';
     export let data;
+
+    
+    let activeIdx = 0;
+    setInterval(
+      () => {
+        if ( activeIdx < data.length-1 ) {
+          activeIdx++;
+        } else {
+          activeIdx = 0;
+        }
+      },
+      10000
+    )
 
     // {
     //     "<INLINE_OBJECT_ID>": {
@@ -63,8 +77,9 @@
 
 
 <section id='wrpr'>
-{#each data as d}
-<section class='bubble left'>
+{#each data as d, idx}
+{#if idx == activeIdx}
+<section class='bubble left {idx}' in:fly="{{ x: 200, duration: 2000, delay: 800 }}" out:fly="{{ x: -2000, duration: 750 }}">
 {#each d.data.body.content as contentItem}
     
     <!-- if contentItem has paragraph display it's text / image -->
@@ -81,11 +96,14 @@
     {/if}
 {/each}
 </section>
+{/if}
 {/each}
 </section>
 
 
 <style lang="scss">
+#wrpr { margin-top: 25px; }
+
 :global(body) {
   background: unset;
   overflow-y: scroll !important;
