@@ -166,7 +166,6 @@
     height: 100vh;
     background-image: linear-gradient(#2bcaff, #77d9ff);
     perspective: 1000px;
-    overflow: hidden;
     text-align: center;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -181,6 +180,10 @@
     --rotate-y: 10deg;
     transform-style: preserve-3d;
     transform: rotateX(-10deg) rotateY(var(--rotate-y));
+
+    @media (max-width: 600px) {
+        width: 85vw;
+    }
 }
 
 /* Ground */
