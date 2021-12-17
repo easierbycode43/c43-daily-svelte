@@ -75,6 +75,7 @@
     }
 </script>
 
+<iframe src='/c43' title='C43' style='border-width: 0; height: 100vh; position: absolute; top: 0; width: 100%;'></iframe>
 
 <section id='wrpr'>
 {#each data as d, idx}
@@ -113,6 +114,8 @@ $radius: 25px;
 
 :global(.bubble) {
 
+  box-shadow: inset 0 2px 0 rgb(64 84 178 / 70%), -5px -4px 25px rgb(0 0 0 / 30%);
+  
   margin: 0 auto;
   padding: 25px;
   width: 35%;
