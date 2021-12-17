@@ -14,6 +14,7 @@
 
 <script type='ts'>
 
+    import base from '../lib/base';
     export let data;
 
     // {
@@ -37,7 +38,7 @@
     })
 
     // element: {inlineObjectElement?, textRun}
-    function formatElement( element, title ) {
+    function formatElement( element, title: string ) {
         
         if ( element.inlineObjectElement ) {
             let { inlineObjectElement } = element;
@@ -46,6 +47,10 @@
                 .inlineObjectProperties
                 .embeddedObject
                 .imageProperties;
+
+            // Avoid Google rate limit by using local images in production
+            let isProd = process.env.NODE_ENV != 'development';
+            if ( isProd )  contentUri = `${ base }/${ title.toLowerCase().replace(/\s/g, '_') }.png`;
 
             return `
             <img src='${contentUri}' alt='ICON' height='58' style='border-radius: 50%; position: absolute; right: 25px; bottom: 25px;' />
@@ -82,6 +87,7 @@
 
 <style lang="scss">
 :global(body) {
+  background: unset;
   overflow-y: scroll !important;
 }
 
