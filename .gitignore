@@ -6,3 +6,4 @@ node_modules
 .env
 src/routes/credentials.json
 src/routes/token.json
+src/routes/token-docs.json
