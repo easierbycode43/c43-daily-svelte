@@ -1,7 +1,7 @@
 const flairByKeywords = {
     americanfootball: ["American Football", "Football", "Super Bowl", "Superbowl"],
     archery: ["archery"],
-    art: ["art workshop", "art workshops", "Artistic", "Art", "Arts", "drawing workshop", "painting", "sketching workshop"],
+    art: ["art workshop", "art workshops", "Artist", "Artistic", "Art", "Arts", "drawing workshop", "painting", "sketching workshop"],
     artisticgymnastics: ["artistic gymnastics"],
     athleticsjumping: ["Jumping"],
     athleticsthrowing: ["discus", "hammer throw", "javelin", "shot put"],
