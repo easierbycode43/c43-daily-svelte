@@ -65,7 +65,7 @@ const flairByKeywords = {
     planmyday: ["Meeting", "plan day", "plan quarter", "plan vacation", "plan week", "vacation planning", "week planning"],
     pride: ["christopher street day", "dyke march", "euro pride", "europride", "Gay & lesbian", "gay and lesbian", "gay lesbian", "gay parade", "gay pride", "gaygler", "gayglers", "lesbian march", "lesbian parade", "lesbian pride", "world pride", "worldpride"],
     quinceanera: ["quinceanera"],
-    reachout: ["Advocacy", "Employment", "reach out to", "send invitations", "write letter"],
+    reachout: ["Advocacy", "clean up", "Employment", "reach out to", "send invitations", "write letter"],
     read: ["ebook", "Newsletter", "newspaper", "reading"],
     repair: ["DIY", "electrician", "fridge repair", "handyman", "plumber"],
     rhythmicgymnastics: ["rhythmic gymnastics"],
