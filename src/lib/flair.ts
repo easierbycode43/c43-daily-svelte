@@ -26,7 +26,7 @@ const flairByKeywords = {
     climbing: ["bouldering", "climbing"],
     code: ["Codecademy", "coding time", "Computer Science", "hackathon", "Hour of Code", "learn to code", "Programming in Java", "Programming in Python", "Rails Girls", "Railsgirls", "Tech", "Web Development", "Web Programming"],
     coffee: ["coffee", "coffees"],
-    concert: ["concert", "concerts", "gig", "gigs", "Music Performance"],
+    concert: ["concert", "concerts", "gig", "gigs", "Performance"],
     cooking: ["cook dinner", "cook lunch", "cook meal", "cooking", "Culinary", "Edible", "make dinner", "make lunch", "prepare dinner", "prepare lunch", "prepare meal", "Recipe"],
     cricket: ["cricket competition", "cricket game", "cricket match"],
     cycling: ["bicycle", "bicycles", "bike", "bikes", "Biking", "cycling", "Mountain Bike", "Mountain Biking"],
@@ -52,7 +52,7 @@ const flairByKeywords = {
     islamicnewyear: ["Hijri New Year", "Islamic New Year", "Parsi New Year"],
     karate: ["Aikido", "jiu jitsu", "jiu-jitsu", "judo", "Jujutsu", "karate", "martial arts", "taekwondo"],
     kayaking: ["Canoe", "Canoeing", "kayaking"],
-    learninstrument: ["cello", "choir", "choir practice", "clarinet", "classical music", "contrabass", "cornett", "flute", "guitar lesson", "Music Skills", "music Class", "music ensemble", "oboe", "orchestra", "piano", "saxophone", "singing", "string quartett", "trombone", "trumpet", "tuba"],
+    learninstrument: ["cello", "choir", "choir practice", "clarinet", "classical music", "contrabass", "cornett", "flute", "guitar lesson", "Music", "music Class", "music ensemble", "oboe", "orchestra", "piano", "saxophone", "singing", "string quartett", "trombone", "trumpet", "tuba"],
     // learnlanguage: <language> Class, <language> Course, Practice <language>, where language is one of: Arabic, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Farsi, Filipino, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukranian, Vietnamese
     learnlanguage: ["Language"],
     lunch: ["Farmer's", "lunch", "luncheon", "lunches"],
