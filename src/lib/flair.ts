@@ -26,7 +26,7 @@ const flairByKeywords = {
     climbing: ["bouldering", "climbing"],
     code: ["Codecademy", "coding time", "Computer Science", "hackathon", "Hour of Code", "learn to code", "Programming in Java", "Programming in Python", "Rails Girls", "Railsgirls", "Tech", "Web Development", "Web Programming"],
     coffee: ["coffee", "coffees"],
-    concert: ["concert", "concerts", "gig", "gigs"],
+    concert: ["concert", "concerts", "gig", "gigs", "Music Performance"],
     cooking: ["cook dinner", "cook lunch", "cook meal", "cooking", "Culinary", "Edible", "make dinner", "make lunch", "prepare dinner", "prepare lunch", "prepare meal", "Recipe"],
     cricket: ["cricket competition", "cricket game", "cricket match"],
     cycling: ["bicycle", "bicycles", "bike", "bikes", "Biking", "cycling", "Mountain Bike", "Mountain Biking"],
