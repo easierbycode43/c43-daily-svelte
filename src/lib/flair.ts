@@ -52,7 +52,7 @@ const flairByKeywords = {
     islamicnewyear: ["Hijri New Year", "Islamic New Year", "Parsi New Year"],
     karate: ["Aikido", "jiu jitsu", "jiu-jitsu", "judo", "Jujutsu", "karate", "martial arts", "taekwondo"],
     kayaking: ["Canoe", "Canoeing", "kayaking"],
-    learninstrument: ["cello", "choir", "choir practice", "clarinet", "classical music", "contrabass", "cornett", "flute", "guitar lesson", "Music", "music Class", "music ensemble", "oboe", "orchestra", "piano", "saxophone", "singing", "string quartett", "trombone", "trumpet", "tuba"],
+    learninstrument: ["cello", "choir", "choir practice", "clarinet", "classical music", "contrabass", "cornett", "flute", "guitar lesson", "Coaching", "music Class", "music ensemble", "oboe", "orchestra", "piano", "saxophone", "singing", "string quartett", "trombone", "trumpet", "tuba"],
     // learnlanguage: <language> Class, <language> Course, Practice <language>, where language is one of: Arabic, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Farsi, Filipino, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukranian, Vietnamese
     learnlanguage: ["Language"],
     lunch: ["Farmer's", "lunch", "luncheon", "lunches"],
