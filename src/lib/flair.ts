@@ -54,6 +54,7 @@ const flairByKeywords = {
     kayaking: ["Canoe", "Canoeing", "kayaking"],
     learninstrument: ["cello", "choir", "choir practice", "clarinet", "classical music", "contrabass", "cornett", "flute", "guitar lesson", "Music", "music Class", "music ensemble", "oboe", "orchestra", "piano", "saxophone", "singing", "string quartett", "trombone", "trumpet", "tuba"],
     // learnlanguage: <language> Class, <language> Course, Practice <language>, where language is one of: Arabic, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Farsi, Filipino, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukranian, Vietnamese
+    learnlanguage: ["Language"],
     lunch: ["Farmer's", "lunch", "luncheon", "lunches"],
     manicure: ["manicure", "manicures", "pedicure", "pedicures"],
     mardigras: ["Fat Tuesday", "Mardi Gras", "Mardigras", "Shrove Tuesday"],
@@ -64,7 +65,7 @@ const flairByKeywords = {
     planmyday: ["Meeting", "plan day", "plan quarter", "plan vacation", "plan week", "vacation planning", "week planning"],
     pride: ["christopher street day", "dyke march", "euro pride", "europride", "Gay & lesbian", "gay and lesbian", "gay lesbian", "gay parade", "gay pride", "gaygler", "gayglers", "lesbian march", "lesbian parade", "lesbian pride", "world pride", "worldpride"],
     quinceanera: ["quinceanera"],
-    reachout: ["Employment", "reach out to", "send invitations", "write letter"],
+    reachout: ["Advocacy", "Employment", "reach out to", "send invitations", "write letter"],
     read: ["ebook", "Newsletter", "newspaper", "reading"],
     repair: ["DIY", "electrician", "fridge repair", "handyman", "plumber"],
     rhythmicgymnastics: ["rhythmic gymnastics"],
