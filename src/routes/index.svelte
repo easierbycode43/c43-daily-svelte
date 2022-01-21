@@ -188,7 +188,7 @@
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
             class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
             style='background: url({getFlairUrl(event.summary)}); background-size: cover; background-position-y: center;'
-            class='flair'
+            class='flair event-wrpr'
         >
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
             {#if 
@@ -209,7 +209,7 @@
 
             <!-- if Google Meet link, AND *not* TV_MODE, show join button -->
             {#if event.hangoutLink}
-            <Joinmeet />
+            <Joinmeet href={event.hangoutLink} />
             {/if}
         </li>
         {:else}
@@ -217,6 +217,7 @@
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
             class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
+            class='event-wrpr'
         >
 
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
@@ -238,7 +239,7 @@
 
             <!-- if Google Meet link, AND *not* TV_MODE, show join button -->
             {#if event.hangoutLink}
-            <Joinmeet />
+            <Joinmeet href={event.hangoutLink} />
             {/if}
         </li>
         {/if}
@@ -265,6 +266,14 @@
 
 
 <style>
+
+    :global(canvas) {
+        pointer-events: none;
+    }
+
+    .event-wrpr {
+        position: relative;
+    }
 
     .notes {
         padding-top: 10pt;
