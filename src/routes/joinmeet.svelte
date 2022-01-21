@@ -36,7 +36,7 @@
         padding: 0 5px;
         position: absolute;
         text-shadow: 0 1px #1e8e3e;
-        color: unset;
+        color: white;
         text-decoration: none;
         background-color: rgba(0, 0, 0, 0.25);
     }
