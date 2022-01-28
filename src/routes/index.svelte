@@ -29,8 +29,8 @@
     let mounted = false;
     let velocityX = 25;
     let velocityY = -10;
-    let santa: Phaser.GameObjects.Sprite;
-    let santaIntroComplete = false;
+    let cupid: Phaser.GameObjects.Sprite;
+    let cupidIntroComplete = false;
     let scene: Phaser.Scene;
 
     let TV_MODE = false;
@@ -47,17 +47,13 @@
         ({ArcadePhysics, Game, Scene, Sprite} = module2);
         mounted = true;
 
-        // TV_MODE = new URL(window.location.href).searchParams.get('mode') == 'TV';
-        
-        // SANTA
-        // Phaser.Physics.Arcade.World.wrap( santa );
         // DRJ:HACK - hide game after 25s (temp fix for flicker issue)
         setTimeout(
             () => {
                 scene.time.addEvent({
                     delay: 25000,
                     callback: () => {
-                        santaIntroComplete = true;
+                        cupidIntroComplete = true;
                     }
                 })
             },
@@ -65,25 +61,26 @@
         )
 	});
 
-    let santaSpriteUrl = `${base}/santa.png`;
+    let cupidSpriteUrl = `${base}/cupid.png`;
 
     function preload( scene ) {
         scene.load.spritesheet(
-            'santa',
-            santaSpriteUrl,
+            'cupid',
+            cupidSpriteUrl,
             {
-                frameWidth: 91,
-                frameHeight: 37
+                frameWidth: 31,
+                frameHeight: 31
             }
         )
     }
 
     function create( scene: Phaser.Scene ) {
         scene.anims.create({
-            key: 'santa/default',
-            frames: scene.anims.generateFrameNumbers('santa'),
-            frameRate: 20,
-            repeat: -1
+            key: 'cupid/default',
+            frames: scene.anims.generateFrameNumbers('cupid'),
+            frameRate: 4,
+            repeat: -1,
+            repeatDelay: 125
         })
     }
 
@@ -249,7 +246,7 @@
 </section>
 
 
-{#if mounted && !santaIntroComplete}
+{#if mounted && !cupidIntroComplete}
 <Game 
     width={400} 
     height={400} 
@@ -257,7 +254,7 @@
     physics={{default: 'arcade'}}
 >
     <Scene key="main" {preload} {create} bind:instance={scene}>
-        <Sprite bind:instance={santa} name='santa' x={-91} y={250} animation='santa/default'>
+        <Sprite bind:instance={cupid} name='cupid' x={-91} y={250} animation='cupid/default'>
             <ArcadePhysics {velocityX} {velocityY} />
         </Sprite>
     </Scene>
