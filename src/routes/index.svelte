@@ -188,7 +188,7 @@
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
             class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
             style='background: url({getFlairUrl(event.summary)}); background-size: cover; background-position-y: center;'
-            class='flair event-wrpr'
+            class={TV_MODE ? 'event-wrpr-tv flair' : 'event-wrpr flair'}
         >
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
             {#if 
@@ -217,7 +217,7 @@
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
             class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
-            class='event-wrpr'
+            class={TV_MODE ? 'event-wrpr-tv' : 'event-wrpr'}
         >
 
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
@@ -273,6 +273,10 @@
 
     .event-wrpr {
         position: relative;
+    }
+
+    .event-wrpr-tv {
+        position: static;
     }
 
     .notes {
