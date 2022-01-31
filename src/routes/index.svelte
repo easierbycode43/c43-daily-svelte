@@ -282,13 +282,26 @@
     }
 
     .date-notes {
-        background-color: #5d3a37;
-        color: white;
-        padding: 0 25px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+        color: #212529;
+        padding: 1rem 2rem 1rem 5rem;
         border-radius: 6px;
         margin-bottom: 10px;
         margin-top: 1em;
-        text-shadow: 0 1px black;
+        background-size: 100% 3rem;
+        position: relative;
+        line-height: 3rem;
+    }
+
+    .date-header:before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        top: 0;
+        left: 30px;
+        bottom: 0;
+        border: 1px solid;
+        border-color: transparent #efe4e4;
     }
 
     .date-header {
@@ -393,4 +406,50 @@
 	.time {
 		font-family: monospace;
 	}
+
+    @media (pointer: coarse) {
+        .date-notes {
+            margin-top: 0;
+            padding: 0 5px 0 40px;
+        }
+
+        .date-header {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .notes-header {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .notes {
+            font-size: 14px;
+            margin: 0;
+            padding-top: 0;
+        }
+
+        ul {
+            align-items: unset;
+            width: 98vw;
+        }
+        
+        li {
+            min-width: unset;
+            padding: 0;
+            width: calc(98vw - 42px);
+        }
+
+        section {
+            width: 100%;
+        }
+
+        li span.event {
+            font-size: 32px;
+        }
+
+        li span.time {
+            font-size: 28px;
+        }
+    }
 </style>
