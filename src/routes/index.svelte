@@ -370,7 +370,8 @@
         text-shadow: 0 1px white;
     }
     li.flair span.event, li.flair span.time {
-        color: white;   
+        color: white;
+        line-height: 55px;
         text-shadow: 0 1px black;
     }
     li.flair span.time {
@@ -409,6 +410,7 @@
 
     @media (pointer: coarse) {
         .date-notes {
+            margin-bottom: 1vw;
             margin-top: 0;
             padding: 0 5px 0 40px;
         }
@@ -445,11 +447,14 @@
         }
 
         li span.event {
-            font-size: 32px;
+            font-size: 28px;
+            letter-spacing: 0;
+            padding-left: 7px;
         }
 
         li span.time {
-            font-size: 28px;
+            font-size: 24px;
+            letter-spacing: -2px;
         }
     }
 </style>
