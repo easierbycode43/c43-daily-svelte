@@ -63,9 +63,7 @@
         width: 100%;
         height: 100%;
         pointer-events: none;
-        display: -webkit-flex;
         display: flex;
-        -webkit-align-items: center;
         align-items: center;
     }
 
@@ -91,7 +89,6 @@
         position: absolute;
         top: 50%;
         width: 100%;
-        -webkit-transform: translate3d(0,-50%,0);
         transform: translate3d(0,-50%,0);
     }
 
@@ -110,8 +107,9 @@
         flex: none;
     }
 
-    .action:focus {
+    .action:hover, .action:focus, .action:active {
         outline: none;
+        border-color: #d67f54;
     }
 
     .action__label {
@@ -143,8 +141,8 @@
         z-index: 1000;
         top: 30px;
         right: 30px;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         padding: 0;
         opacity: 0;
         transition: transform 0.3s, opacity 0.3s;
