@@ -23,6 +23,7 @@
     import base from '../lib/base';
     import Joinmeet from './joinmeet.svelte';
     import getFlairUrl from '../lib/flair';
+    import Watchmorningmeeting from './watchmorningmeeting.svelte';
 
     let ArcadePhysics, Game, Scene, Sprite;
 	let Phaser;
@@ -152,10 +153,10 @@
         <!-- date header -->
         <p class='date-header'>{currentDate} • {formatter.format($time)}</p>
 
-        <!-- notes -->
-        <p class='notes-header'>NOTES</p>
+        <!-- TODO: remove notes once video is ready -->
+        <p style='display:none' class='notes-header'>NOTES</p>
 
-        <p class='notes'>
+        <p style='display:none' class='notes'>
             {#each data2.body.content as contentItem}
     
                 <!-- if contentItem has paragraph display it's text / image -->
@@ -172,6 +173,8 @@
                 {/if}
             {/each}
         </p>
+
+        <Watchmorningmeeting />
     </div>
     {/if}
 
@@ -291,6 +294,7 @@
         background-size: 100% 3rem;
         position: relative;
         line-height: 3rem;
+        width: 100%;
     }
 
     .date-header:before {
