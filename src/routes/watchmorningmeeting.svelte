@@ -39,7 +39,7 @@
 </script>
 
 <button class="action action--hidden action--play">
-    <i style='text-shadow: 0 1px #1e8e3e'>▻</i><span class="action__label">Watch Morning Meeting</span>
+    <i style='font-style: unset; text-shadow: 0 1px #1e8e3e;'>▻</i><span class="action__label">Watch Morning Meeting</span>
 </button>
 
 <div class="video-wrap">
