@@ -30,8 +30,8 @@
     let mounted = false;
     let velocityX = 25;
     let velocityY = -10;
-    let cupid: Phaser.GameObjects.Sprite;
-    let cupidIntroComplete = false;
+    let leprechaun: Phaser.GameObjects.Sprite;
+    let leprechaunIntroComplete = false;
     let scene: Phaser.Scene;
 
     let TV_MODE = false;
@@ -54,7 +54,7 @@
                 scene.time.addEvent({
                     delay: 25000,
                     callback: () => {
-                        cupidIntroComplete = true;
+                        leprechaunIntroComplete = true;
                     }
                 })
             },
@@ -62,26 +62,25 @@
         )
 	});
 
-    let cupidSpriteUrl = `${base}/cupid.png`;
+    let leprechaunSpriteUrl = `${base}/leprechaun.png`;
 
     function preload( scene ) {
         scene.load.spritesheet(
-            'cupid',
-            cupidSpriteUrl,
+            'leprechaun',
+            leprechaunSpriteUrl,
             {
-                frameWidth: 31,
-                frameHeight: 31
+                frameWidth: 16,
+                frameHeight: 24
             }
         )
     }
 
     function create( scene: Phaser.Scene ) {
         scene.anims.create({
-            key: 'cupid/default',
-            frames: scene.anims.generateFrameNumbers('cupid'),
-            frameRate: 4,
-            repeat: -1,
-            repeatDelay: 125
+            key: 'leprechaun/default',
+            frames: scene.anims.generateFrameNumbers('leprechaun'),
+            frameRate: 6,
+            repeat: -1
         })
     }
 
@@ -249,7 +248,7 @@
 </section>
 
 
-{#if mounted && !cupidIntroComplete}
+{#if mounted && !leprechaunIntroComplete}
 <Game 
     width={400} 
     height={400} 
@@ -257,7 +256,7 @@
     physics={{default: 'arcade'}}
 >
     <Scene key="main" {preload} {create} bind:instance={scene}>
-        <Sprite bind:instance={cupid} name='cupid' x={-91} y={250} animation='cupid/default'>
+        <Sprite bind:instance={leprechaun} name='leprechaun' x={-91} y={250} animation='leprechaun/default'>
             <ArcadePhysics {velocityX} {velocityY} />
         </Sprite>
     </Scene>
