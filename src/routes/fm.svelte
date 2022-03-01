@@ -10,7 +10,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
         <div class='col-item'>
             <div class='product'>
                 <div class='image-box'>
-                    <a href="/products/lemon-basil">
+                    <a href="#/products/lemon-basil">
                         <span class="img" style="height: 105px; display: block;">        
                             <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-lemon-basil.jpg`} alt='lemon-basil'>
                         </span>
@@ -23,7 +23,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
                     </div>
                     
                     <h2 class="title">
-                        <a href="/products/granola">Lemon Basil</a>
+                        <a href="#/products/granola">Lemon Basil</a>
                     </h2>
 
                     <div class="price">
@@ -60,7 +60,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
         <div class='col-item'>
             <div class='product'>
                 <div class='image-box'>
-                    <a href="/products/maple">
+                    <a href="#/products/maple">
                         <span class="img" style="height: 105px; display: block;">        
                             <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-maple.jpg`} alt='maple'>
                         </span>
@@ -73,7 +73,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
                     </div>
                     
                     <h2 class="title">
-                        <a href="/products/granola">Maple Syrup</a>
+                        <a href="#/products/granola">Maple Syrup</a>
                     </h2>
 
                     <div class="price">
@@ -112,7 +112,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
         <div class='col-item'>
             <div class='product'>
                 <div class='image-box'>
-                    <a href="/products/granola">
+                    <a href="#/products/granola">
                         <span class="img" style="height: 105px; display: block;">        
                             <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-granola.jpg`} alt='granola'>
                         </span>
@@ -125,7 +125,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
                     </div>
                     
                     <h2 class="title">
-                        <a href="/products/granola">Granola</a>
+                        <a href="#/products/granola">Granola</a>
                     </h2>
 
                     <div class="price">
@@ -162,7 +162,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
         <div class='col-item'>
             <div class='product'>
                 <div class='image-box'>
-                    <a href="/products/ranch">
+                    <a href="#/products/ranch">
                         <span class="img" style="height: 105px; display: block;">        
                             <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-ranch.jpg`} alt='ranch'>
                         </span>
@@ -175,7 +175,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
                     </div>
                     
                     <h2 class="title">
-                        <a href="/products/granola">Ranch</a>
+                        <a href="#/products/granola">Ranch</a>
                     </h2>
 
                     <div class="price">
@@ -213,7 +213,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
         <div class='col-item'>
             <div class='product'>
                 <div class='image-box'>
-                    <a href="/products/strawberry">
+                    <a href="#/products/strawberry">
                         <span class="img" style="height: 105px; display: block;">        
                             <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-strawberry.jpg`} alt='strawberry'>
                         </span>
@@ -226,7 +226,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
                     </div>
                     
                     <h2 class="title">
-                        <a href="/products/granola">Strawberry Syrup</a>
+                        <a href="#/products/granola">Strawberry Syrup</a>
                     </h2>
 
                     <div class="price">
@@ -264,7 +264,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
         <div class='col-item'>
             <div class='product'>
                 <div class='image-box'>
-                    <a href="/products/applesauce">
+                    <a href="#/products/applesauce">
                         <span class="img" style="height: 105px; display: block;">        
                             <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-applesauce.jpg`} alt='applesauce'>
                         </span>
@@ -277,7 +277,7 @@ let granolaUrl = `${base}/fm-granola.jpg`;
                     </div>
                     
                     <h2 class="title">
-                        <a href="/products/granola">Applesauce</a>
+                        <a href="#/products/granola">Applesauce</a>
                     </h2>
 
                     <div class="price">
