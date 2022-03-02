@@ -2,15 +2,15 @@
   import base from "$lib/base";
   let granolaUrl = `${base}/fm-granola.jpg`;
 </script>
-<div class='row' style='margin-top: 33px'>
+<div class='row mt'>
   <div class="col-three">
 
     <div class='col-item'>
       <div class='product'>
         <div class='image-box'>
           <a href="#/products/lemon-basil">
-            <span class="img" style="height: 105px; display: block;">
-              <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-lemon-basil.jpg`} alt='lemon-basil'>
+            <span class="img">
+              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-lemon-basil.jpg`} alt='lemon-basil'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -23,7 +23,7 @@
           </div>
 
           <h2 class="title">
-            <a href="#/products/granola">Lemon Basil</a>
+            <a>Lemon Basil</a>
           </h2>
 
           <div class="price">
@@ -34,7 +34,7 @@
 
           <div class="product-inside-hover">
             <div class="row-btn">
-              <form action="/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
+              <form action="#/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="34087180468363">
                 <input type="hidden" name="properties[Product type]" value="Non-perishable">
 
@@ -63,8 +63,8 @@
       <div class='product'>
         <div class='image-box'>
           <a href="#/products/maple">
-            <span class="img" style="height: 105px; display: block;">
-              <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-maple.jpg`} alt='maple'>
+            <span class="img">
+              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-maple.jpg`} alt='maple'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -77,7 +77,7 @@
           </div>
 
           <h2 class="title">
-            <a href="#/products/granola">Maple Syrup</a>
+            <a>Maple Syrup</a>
           </h2>
 
           <div class="price">
@@ -88,7 +88,7 @@
 
           <div class="product-inside-hover">
             <div class="row-btn">
-              <form action="/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
+              <form action="#/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="34087180468363">
                 <input type="hidden" name="properties[Product type]" value="Non-perishable">
 
@@ -118,9 +118,9 @@
     <div class='col-item'>
       <div class='product'>
         <div class='image-box'>
-          <a href="#/products/granola">
-            <span class="img" style="height: 105px; display: block;">
-              <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-granola.jpg`} alt='granola'>
+          <a>
+            <span class="img">
+              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-granola.jpg`} alt='granola'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -133,7 +133,7 @@
           </div>
 
           <h2 class="title">
-            <a href="#/products/granola">Granola</a>
+            <a>Granola</a>
           </h2>
 
           <div class="price">
@@ -144,7 +144,7 @@
 
           <div class="product-inside-hover">
             <div class="row-btn">
-              <form action="/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
+              <form action="#/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="34087180468363">
                 <input type="hidden" name="properties[Product type]" value="Non-perishable">
 
@@ -173,8 +173,8 @@
       <div class='product'>
         <div class='image-box'>
           <a href="#/products/ranch">
-            <span class="img" style="height: 105px; display: block;">
-              <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-ranch.jpg`} alt='ranch'>
+            <span class="img">
+              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-ranch.jpg`} alt='ranch'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -187,7 +187,7 @@
           </div>
 
           <h2 class="title">
-            <a href="#/products/granola">Ranch</a>
+            <a>Ranch</a>
           </h2>
 
           <div class="price">
@@ -198,7 +198,7 @@
 
           <div class="product-inside-hover">
             <div class="row-btn">
-              <form action="/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
+              <form action="#/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="34087180468363">
                 <input type="hidden" name="properties[Product type]" value="Non-perishable">
 
@@ -228,8 +228,8 @@
       <div class='product'>
         <div class='image-box'>
           <a href="#/products/strawberry">
-            <span class="img" style="height: 105px; display: block;">
-              <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-strawberry.jpg`} alt='strawberry'>
+            <span class="img">
+              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-strawberry.jpg`} alt='strawberry'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -242,7 +242,7 @@
           </div>
 
           <h2 class="title">
-            <a href="#/products/granola">Strawberry Syrup</a>
+            <a>Strawberry Syrup</a>
           </h2>
 
           <div class="price">
@@ -253,7 +253,7 @@
 
           <div class="product-inside-hover">
             <div class="row-btn">
-              <form action="/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
+              <form action="#/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="34087180468363">
                 <input type="hidden" name="properties[Product type]" value="Non-perishable">
 
@@ -283,8 +283,8 @@
       <div class='product'>
         <div class='image-box'>
           <a href="#/products/applesauce">
-            <span class="img" style="height: 105px; display: block;">
-              <img class="lazyload" style="height: 105px; display: block;" src={`${base}/fm-applesauce.jpg`} alt='applesauce'>
+            <span class="img">
+              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-applesauce.jpg`} alt='applesauce'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -297,7 +297,7 @@
           </div>
 
           <h2 class="title">
-            <a href="#/products/granola">Applesauce</a>
+            <a>Applesauce</a>
           </h2>
 
           <div class="price">
@@ -308,7 +308,7 @@
 
           <div class="product-inside-hover">
             <div class="row-btn">
-              <form action="/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
+              <form action="#/cart/add" method="post" class="shopify-product-form" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="34087180468363">
                 <input type="hidden" name="properties[Product type]" value="Non-perishable">
 
@@ -337,25 +337,47 @@
 
 
 
+<link rel="stylesheet" href="https://codepen.io/web-dot-dev/pen/abpoXGZ.css">
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' />
 <style lang='scss'>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
   :global(body) {
-    background: url(https://thirsty.store/signup/bg_artistic.webp);
-    background-origin: border-box;
-    background-size: cover;
+    background: url(https://thirsty.store/signup/bg_artistic.webp) !important;
+    background-origin: border-box !important;
+    background-size: cover !important;
+    font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   }
 
-  .col-three {
-    display: flex;
-    flex-wrap: wrap;
+  .mt {
+    margin-top: 33px;
+  }
 
-    &>.col-item {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%;
+  .row {
+    justify-content: space-around;
+    margin-left: unset;
+    margin-right: unset;
+    .col-three {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &>.col-item {
+        flex: 0 0 33.33333%;
+        margin-bottom: 1.33333%;
+        max-width: 32%;
+
+        span.img {
+          height: 150px;
+          display: flex;
+          justify-content: center;
+        }
+
+      }
     }
   }
 
   .add-info {
+    font-family: 'Montserrat';
     list-style: none;
     margin: 0;
     padding: 0;
@@ -363,8 +385,30 @@
     flex-direction: column;
   }
 
-  .product .description .title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+  .product {
+    background-color: #ffffffb3;
+    border-radius: 6px;
+    text-align: center;
+    text-shadow: 0 1px rgb(255 255 255 / 75%);
+    .description .title {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      &> a {
+        color: #6f007c;
+        text-decoration: none;
+      }
+    }
+
+    .btn-addtocart {
+      display: flex;
+      justify-content: center;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      min-width: 100%;
+      padding: revert;
+    }
   }
 </style>
