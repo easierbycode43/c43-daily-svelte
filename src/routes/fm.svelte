@@ -410,7 +410,7 @@
       display: flex;
       justify-content: center;
       min-width: 100%;
-      padding: revert;
+      padding: 0;
     }
   }
 </style>
