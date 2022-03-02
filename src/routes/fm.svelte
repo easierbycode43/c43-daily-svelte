@@ -365,6 +365,8 @@
         flex: 0 0 33.33333%;
         margin-bottom: 1.33333%;
         max-width: 32%;
+        overflow: hidden;
+        border-radius: 6px;
 
         span.img {
           height: 150px;
@@ -407,8 +409,6 @@
     .btn-addtocart {
       display: flex;
       justify-content: center;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
       min-width: 100%;
       padding: revert;
     }
