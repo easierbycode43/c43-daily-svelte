@@ -10,7 +10,7 @@
         <div class='image-box'>
           <a href="#/products/lemon-basil">
             <span class="img">
-              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-lemon-basil.jpg`} alt='lemon-basil'>
+              <img class="lazyload" style="height: 150px; display: block;" src='https://res.cloudinary.com/dujip8nqb/image/upload/c_scale,h_150/v1646255623/C43/fm-lemon-basil.jpg' alt='lemon-basil'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -64,7 +64,7 @@
         <div class='image-box'>
           <a href="#/products/maple">
             <span class="img">
-              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-maple.jpg`} alt='maple'>
+              <img class="lazyload" style="height: 150px; display: block;" src='https://res.cloudinary.com/dujip8nqb/image/upload/c_scale,h_150/v1646255623/C43/fm-maple.jpg' alt='maple'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -120,7 +120,7 @@
         <div class='image-box'>
           <a>
             <span class="img">
-              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-granola.jpg`} alt='granola'>
+              <img class="lazyload" style="height: 150px; display: block;" src='https://res.cloudinary.com/dujip8nqb/image/upload/c_scale,h_150/v1646255623/C43/fm-granola.jpg' alt='granola'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -174,7 +174,7 @@
         <div class='image-box'>
           <a href="#/products/ranch">
             <span class="img">
-              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-ranch.jpg`} alt='ranch'>
+              <img class="lazyload" style="height: 150px; display: block;" src='https://res.cloudinary.com/dujip8nqb/image/upload/c_scale,h_150/v1646255623/C43/fm-ranch.jpg' alt='ranch'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -229,7 +229,7 @@
         <div class='image-box'>
           <a href="#/products/strawberry">
             <span class="img">
-              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-strawberry.jpg`} alt='strawberry'>
+              <img class="lazyload" style="height: 150px; display: block;" src='https://res.cloudinary.com/dujip8nqb/image/upload/c_scale,h_150/v1646255623/C43/fm-strawberry.jpg' alt='strawberry'>
             </span>
             <span class="label-location"></span>
           </a>
@@ -284,7 +284,7 @@
         <div class='image-box'>
           <a href="#/products/applesauce">
             <span class="img">
-              <img class="lazyload" style="height: 150px; display: block;" src={`${base}/fm-applesauce.jpg`} alt='applesauce'>
+              <img class="lazyload" style="height: 150px; display: block;" src='https://res.cloudinary.com/dujip8nqb/image/upload/c_scale,h_150/v1646255623/C43/fm-applesauce.jpg' alt='applesauce'>
             </span>
             <span class="label-location"></span>
           </a>
