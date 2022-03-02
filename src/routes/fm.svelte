@@ -399,6 +399,8 @@
       &> a {
         color: #6f007c;
         text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
 
