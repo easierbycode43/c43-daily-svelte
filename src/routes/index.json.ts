@@ -52,6 +52,8 @@ function listEvents(auth, done) {
           summary: value.summary,
           hangoutLink: value.hangoutLink || null
         })
+
+        console.log({ value })
       })
 
       done({

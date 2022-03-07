@@ -181,6 +181,7 @@
         {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
         {#if TV_MODE}<li class='day-label'>{#if day !== currentDay}{ day }{:else}{formatter.format($time)}{/if}</li>{/if}
         {#each events as event}
+        {@debug(event)}
         {#if getFlairUrl(event.summary) !== null}
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
