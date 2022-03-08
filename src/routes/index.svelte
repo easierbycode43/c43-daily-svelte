@@ -276,6 +276,8 @@
             </li>
             {#if eventSelected.description}
 			<li>{ eventSelected.description }</li>
+            {:else}
+            <li>🚧 DESCRIPTION COMING SOON 🚧</li>
             {/if}
 		</ol>
 	</Modal>
