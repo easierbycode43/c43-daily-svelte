@@ -13,10 +13,10 @@
 		<link rel="modulepreload" href="/c43-daily-svelte/_app/chunks/vendor-a5891121.js">
 		<link rel="modulepreload" href="/c43-daily-svelte/_app/chunks/preload-helper-44e78077.js">
 		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/__layout.svelte-f0c153ae.js">
-		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/lunch.svelte-700586ef.js">
+		<link rel="modulepreload" href="/c43-daily-svelte/_app/pages/modal.svelte-7de4b1f0.js">
 		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/pages/__layout.svelte-6294338e.css">
-		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/pages/lunch.svelte-97cab550.css">
+		<link rel="stylesheet" href="/c43-daily-svelte/_app/assets/pages/modal.svelte-a1b21737.css">
 
 		<script type="module">
 			import { start } from "/c43-daily-svelte/_app/start-0d6e3736.js";
@@ -33,11 +33,11 @@
 					error: null,
 					nodes: [
 						import("/c43-daily-svelte/_app/pages/__layout.svelte-f0c153ae.js"),
-						import("/c43-daily-svelte/_app/pages/lunch.svelte-700586ef.js")
+						import("/c43-daily-svelte/_app/pages/modal.svelte-7de4b1f0.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "\u002Flunch",
+						path: "\u002Fmodal",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -49,8 +49,17 @@
 		<div id="svelte">
 
 
-<main><section class="svelte-tfi8vk"><ul class="svelte-tfi8vk"><li class="svelte-tfi8vk">Lunch!</li></ul>
-</section>
+<main>
+
+<div class="modal-background svelte-229vf8"></div>
+
+<div class="modal svelte-229vf8" role="dialog" aria-modal="true">
+	<hr>
+	
+
+	
+	<button autofocus class="svelte-229vf8">✖</button>
+</div>
 </main>
 
 
