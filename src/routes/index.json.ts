@@ -50,7 +50,8 @@ function listEvents(auth, done) {
           start: formatDate( value.start.dateTime || value.start.date ),
           startMs: Number( new Date( value.start.dateTime || value.start.date ) ),
           summary: value.summary,
-          hangoutLink: value.hangoutLink || null
+          hangoutLink: value.hangoutLink || null,
+          description: value.description || null
         })
 
         console.log({ value })

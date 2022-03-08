@@ -24,6 +24,13 @@
     import Joinmeet from './joinmeet.svelte';
     import getFlairUrl from '../lib/flair';
     import Watchmorningmeeting from './watchmorningmeeting.svelte';
+    import Modal from './modal.svelte';
+    import Icon from '@iconify/svelte';
+
+
+
+	let eventSelected;
+    let showModal = false;
 
     let ArcadePhysics, Game, Scene, Sprite;
 	let Phaser;
@@ -96,7 +103,8 @@
         start: string,
         startMs: number, 
         summary: string,
-        hangoutLink: string | null
+        hangoutLink: string | null,
+        description: string
     }
 
     export let data: {
@@ -181,7 +189,6 @@
         {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
         {#if TV_MODE}<li class='day-label'>{#if day !== currentDay}{ day }{:else}{formatter.format($time)}{/if}</li>{/if}
         {#each events as event}
-        {@debug(event)}
         {#if getFlairUrl(event.summary) !== null}
         <li
             class:starting={(event.startMs - 600000) <= currentMs && (event.startMs + 300000) >= currentMs}
@@ -218,6 +225,11 @@
             class:active={event.startMs <= currentMs && event.endMs >= currentMs}
             class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
             class={TV_MODE ? 'event-wrpr-tv' : 'event-wrpr'}
+            on:click={() => {
+                eventSelected = event;
+                showModal = true;
+            }}
+
         >
 
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
@@ -249,6 +261,28 @@
 </section>
 
 
+
+{#if showModal}
+	<Modal on:close="{() => showModal = false}">
+		<h2 class='h2-header' slot="header">
+			{ eventSelected.summary }
+		</h2>
+
+		<ol class="modal-list">
+            <li style='font-size: 14px'>
+                <Icon style='color: #a2a2a2' icon="ic:baseline-access-time" />
+                &nbsp;
+                { eventSelected.start }    
+            </li>
+            {#if eventSelected.description}
+			<li>{ eventSelected.description }</li>
+            {/if}
+		</ol>
+	</Modal>
+{/if}
+
+
+
 {#if mounted && !leprechaunIntroComplete}
 <Game 
     width={400} 
@@ -266,6 +300,18 @@
 
 
 <style>
+
+    .modal-list li {
+        box-shadow: none;
+        justify-content: unset;
+    }
+
+    .h2-header {
+        font-family: 'Open Sans Condensed';
+        font-size: 40px;
+        letter-spacing: 1.5px;
+        margin: 0;
+    }
 
     :global(canvas) {
         pointer-events: none;
