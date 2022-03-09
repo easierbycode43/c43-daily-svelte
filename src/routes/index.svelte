@@ -279,7 +279,7 @@
                 { eventSelected.start }    
             </li>
             {#if eventSelected.description}
-			<li>{ eventSelected.description }</li>
+			<li>{@html eventSelected.description }</li>
             {:else}
             <li>🚧 DESCRIPTION COMING SOON 🚧</li>
             {/if}
@@ -306,6 +306,10 @@
 
 
 <style>
+
+    .modal-list {
+        padding-inline-start: 0;
+    }
 
     .modal-list li {
         box-shadow: none;
