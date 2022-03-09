@@ -196,6 +196,10 @@
             class:hidden={(!TV_MODE && day !== currentDay) || event.endMs <= currentMs}
             style='background: url({getFlairUrl(event.summary)}); background-size: cover; background-position-y: center;'
             class={TV_MODE ? 'event-wrpr-tv flair' : 'event-wrpr flair'}
+            on:click={() => {
+                eventSelected = event;
+                showModal = true;
+            }}
         >
             <!-- if more than 10 mins away, and less than 50 mins, show UpNext -->
             {#if 
