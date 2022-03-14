@@ -47,7 +47,7 @@ const flairByKeywords = {
     haircut: ["hair", "haircut", "hairdresser"],
     halloween: ["All Hallows' Eve", "All Saints' Eve", "Allhalloween", "hallowe'en", "halloween", "helloween"],
     handball: ["Handball"],
-    handcraft: ["cindy", "Bead", "crochet", "embroidery", "felting", "handicraft", "knitting", "millinery", "patchwork", "quilting", "sewing"],
+    handcraft: ["(cindy)", "Bead", "crochet", "embroidery", "felting", "handicraft", "knitting", "millinery", "patchwork", "quilting", "sewing"],
     hiking: ["hike", "hikes", "hiking"],
     islamicnewyear: ["Hijri New Year", "Islamic New Year", "Parsi New Year"],
     karate: ["defense", "Aikido", "jiu jitsu", "jiu-jitsu", "judo", "Jujutsu", "karate", "martial arts", "taekwondo"],
