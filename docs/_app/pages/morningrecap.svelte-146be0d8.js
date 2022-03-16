@@ -1,0 +1,1 @@
+import{S as o,i as r,s as i}from"../chunks/vendor-6dabb950.js";const u=async({fetch:a})=>({props:{data:await(await a("morningrecap.json")).json()}});function c(a,t,n){let{data:s}=t;return a.$$set=e=>{"data"in e&&n(0,s=e.data)},[s]}class l extends o{constructor(t){super();r(this,t,c,null,i,{data:0})}}export{l as default,u as load};
