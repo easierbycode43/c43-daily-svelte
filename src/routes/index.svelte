@@ -69,15 +69,15 @@
         )
 	});
 
-    let leprechaunSpriteUrl = `${base}/leprechaun.png`;
+    let leprechaunSpriteUrl = `${base}/karon-musk.png`;
 
     function preload( scene ) {
         scene.load.spritesheet(
             'leprechaun',
             leprechaunSpriteUrl,
             {
-                frameWidth: 16,
-                frameHeight: 24
+                frameWidth: 36,
+                frameHeight: 54
             }
         )
     }
