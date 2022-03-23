@@ -132,14 +132,14 @@
     <!-- People -->
     <div class="person person-1">🚶</div>
     <div class="person person-2">🚶</div>
-    <div class="person person-3">🦸🏼‍♀️</div>
-    <div class="person person-4">🚶</div>
+    <div class="person person-3">🚶🏻‍♀️</div>
+    <div class="person person-4">🐇</div>
     <div class="person person-5">🚶</div>
     <div class="person person-6">🚶</div>
 
     <!-- Animals -->
     <div class="dog dog-1">🐕</div>
-    <div class="dog dog-2">🐈</div>
+    <div class="dog dog-2">🐕‍🦺</div>
     <div class="cat cat-1">🐈</div>
     <div class="cat cat-2">🐇</div>
   </div>
@@ -640,6 +640,7 @@
 .person-3 {
     transform: translate(130px, 265px) rotateX(-90deg) rotateY(180deg);
     animation: person3 28s linear infinite;
+    font-size: 22px;
 }
 
 .person-4 {
@@ -683,6 +684,7 @@
 .dog-2 {
     transform: translate(150px, 265px) rotateX(-90deg) rotateY(180deg);
     animation: dog2 28s linear infinite;
+    font-size: 15px;
 }
 
 .cat {
@@ -692,6 +694,8 @@
 .cat-1 {
     transform: translate(580px, 310px) rotateX(-90deg);
     animation: cat1 40s linear infinite;
+    filter: hue-rotate(0);
+    font-size: 12px;
 }
 
 .cat-2 {
@@ -1082,18 +1086,22 @@
 @keyframes cat1 {
     45% {
         transform: translate(130px, 310px) rotateX(-90deg);
+        filter: hue-rotate(162deg);
     }
 
     50% {
         transform: translate(130px, 310px) rotateX(-90deg) rotateY(180deg);
+        filter: hue-rotate(180deg);
     }
 
     95% {
         transform: translate(580px, 310px) rotateX(-90deg) rotateY(180deg);
+        filter: hue-rotate(342deg);
     }
 
     100% {
         transform: translate(580px, 310px) rotateX(-90deg) rotateY(0deg);
+        filter: hue-rotate(360deg);
     }
 }
 
