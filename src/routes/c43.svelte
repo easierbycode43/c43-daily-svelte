@@ -545,8 +545,8 @@
     animation: taxi 17s ease-in-out infinite;
 
     background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/veyo-car.png);
-    width: 107px;
-    height: 34px;
+    width: 268px;
+    height: 86px;
     margin: auto;
 }
 
