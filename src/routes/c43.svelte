@@ -541,12 +541,12 @@
 }
 
 .taxi-1 {
-    // transform: translate(20px, 45px) rotateX(-90deg) rotateY(180deg);
+    transform: translate(20px, 45px) rotateX(-90deg) rotateY(180deg);
     animation: taxi 17s ease-in-out infinite;
 
     background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/veyo-car.png);
-    width: 268px;
-    height: 86px;
+    width: 107px;
+    height: 34px;
     margin: auto;
 }
 
