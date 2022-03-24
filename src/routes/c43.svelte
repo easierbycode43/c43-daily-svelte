@@ -357,12 +357,12 @@
 }
 
 .c43-billboard {
-  background-image: url(https://community43.org/wp-content/uploads/2020/07/stylize43background.jpg);
+    background-image: url(https://community43.org/wp-content/uploads/2020/07/stylize43background.jpg);
     background-size: contain;
     box-shadow: 2px 2px #797780;
     font-family: 'Montserrat';
     height: 66px;
-  transform: translate(190px, 240px) rotateX(-90deg);
+    transform: translate3d(0, 240px, 90px) translate(190px, 240px) rotateX(-100deg);
     width: 120px;
 }
 
