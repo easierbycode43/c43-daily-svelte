@@ -38,6 +38,7 @@
     <div class="music-2">🎶🎤</div>
     <div class="art-1">🎨</div>
     <div class="art-2">🖌️</div>
+    <div class="chef">👨🏻‍🍳</div>
     <div class='computer'>💻</div>
     <div class='computer-2'>💻</div>
     <div class="tree tree-1">🌲</div>
@@ -348,6 +349,11 @@
 }
 .art-1, .art-2 {
   font-size: 24px;
+}
+
+.chef {
+  font-size: 20px;
+  transform: translate(365px, 255px) rotateX(-90deg) rotateY(calc(var(--rotate-y)*-1));
 }
 
 .c43-billboard {
