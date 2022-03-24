@@ -136,7 +136,7 @@
     <div class="person person-3">🚶🏻‍♀️</div>
     <div class="person person-4">🐇</div>
     <div class="person person-5">🚶</div>
-    <div class="person person-6">🚶</div>
+    <div class="person duaniac"></div>
 
     <!-- Animals -->
     <div class="dog dog-1">🐕</div>
@@ -664,9 +664,22 @@
     animation: person5 30s linear infinite;
 }
 
-.person-6 {
-    transform: translate(20px, 520px) rotateX(-90deg) rotateY(180deg);
-    animation: person6 40s linear infinite;
+.duaniac {
+    transform: translate(20px, 469px) rotateX(-90deg) rotateY(180deg);
+    animation: duaniac 40s linear infinite, duaniacPlayX 1s steps(3) infinite;
+  
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/duaniac.png);
+    width: 45px;
+    height: 56px;
+}
+
+@keyframes duaniacPlayX {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: 135px;
+  }
 }
 
 .couple-1 {
@@ -1040,21 +1053,21 @@
     }
 }
 
-@keyframes person6 {
+@keyframes duaniac {
     45% {
-        transform: translate(580px, 520px) rotateX(-90deg) rotateY(180deg);
+        transform: translate(580px, 469px) rotateX(-90deg) rotateY(180deg);
     }
 
     50% {
-        transform: translate(580px, 520px) rotateX(-90deg) rotateY(0deg);
+        transform: translate(580px, 469px) rotateX(-90deg) rotateY(0deg);
     }
 
     95% {
-        transform: translate(20px, 520px) rotateX(-90deg) rotateY(0deg);
+        transform: translate(20px, 469px) rotateX(-90deg) rotateY(0deg);
     }
 
     100% {
-        transform: translate(20px, 520px) rotateX(-90deg) rotateY(-180deg);
+        transform: translate(20px, 469px) rotateX(-90deg) rotateY(-180deg);
     }
 }
 
