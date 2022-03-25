@@ -184,6 +184,8 @@
         <Watchmorningmeeting />
     </div>
     {/if}
+	
+	<iframe src="https://thirsty.store/c43-daily-svelte/c43" style="position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; z-index: -1;"></iframe>
 
     <ul>
         {#each Object.entries(data.eventsByDay) as [day, events], idx (day)}
