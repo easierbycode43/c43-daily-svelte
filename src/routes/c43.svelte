@@ -112,22 +112,22 @@
     <div class="tree tree-87">🌲</div>
     <div class="tree tree-88">🌳</div>
     <div class="tree tree-89">🌳</div>
-    <div class="tree tree-90">🌲</div>
+    <div class="palmtree tree-90"></div>
     <div class="tree tree-91">🌳</div>
     <div class="tree tree-92">🌳</div>
-    <div class="tree tree-93">🌲</div>
-    <div class="tree tree-94">🌲</div>
+    <div class="palmtree tree-93"></div>
+    <div class="palmtree tree-94"></div>
     <div class="tree tree-95">🌳</div>
     <div class="tree tree-96">🌳</div>
-    <div class="tree tree-97">🌲</div>
+    <div class="palmtree tree-97"></div>
     <div class="tree tree-98">🌳</div>
-    <div class="tree tree-99">🌲</div>
+    <div class="palmtree tree-99"></div>
     <div class="tree tree-100">🌳</div>
-    <div class="tree tree-101">🌲</div>
+    <div class="palmtree tree-101"></div>
     <div class="tree tree-102">🌳</div>
-    <div class="tree tree-103">🌲</div>
-    <div class="tree tree-104">🌲</div>
-    <div class="tree tree-105">🌲</div>
+    <div class="palmtree tree-103"></div>
+    <div class="palmtree tree-104"></div>
+    <div class="palmtree tree-105"></div>
     <div class="tree tree-106">🌳</div>
 
     <!-- People -->
@@ -498,6 +498,12 @@
 }
 
 /* Trees */
+
+.palmtree {
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/palmtree.png);
+    height: 32px;
+    width: 32px;
+}
 
 .tree {
     font-size: 32px;
