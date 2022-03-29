@@ -27,7 +27,7 @@
     <div class="car car-1">🚗</div>
     <div class="taxi taxi-1"></div>
     <div class="police-car">🚓</div>
-    <div class="bus bus-1">🚌</div>
+    <div class="bus bus-1"></div>
     <div class="bus bus-2"></div>
     <div class="truck articulated-truck">🚛</div>
     <div class="helicopter">🚁</div>
@@ -600,6 +600,10 @@
 .bus-1 {
     transform: translate(650px, 490px) rotateX(-90deg);
     animation: bus1 18s ease-in-out infinite;
+
+    background-image: url(bus.png);
+    width: 63px;
+    height: 38px;
 }
 
 // KARON MUSK
