@@ -85,14 +85,14 @@
     <div class="tree tree-43"></div>
     <div class="tree tree-44">🌴</div>
     <div class="tree tree-45">🌴</div>
-    <div class="plant tree tree-46">🌱</div>
+    <div class="sprout plant tree tree-46"></div>
     <div class="plant tree tree-48">🚐</div>
     <div class="tree tree-51"></div>
     <div class="palmtree tree-52"></div>
-    <div class="plant tree tree-56">🌱</div>
+    <div class="sprout plant tree tree-56"></div>
     <div class="tree tree-58"></div>
     <div class="tree tree-61"></div>
-    <div class="plant tree tree-62">🌱</div>
+    <div class="sprout plant tree tree-62"></div>
     <div class="palmtree tree-63"></div>
     <div class="tree tree-64"></div>
     <div class="tree tree-75"></div>
@@ -505,6 +505,12 @@
     background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/palmtree.png);
     height: 32px;
     width: 32px;
+}
+
+.sprout {
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/sprout.png) !important;
+    height: 36px;
+    width: 40px;
 }
 
 .tree {
