@@ -601,7 +601,7 @@
     transform: translate(650px, 490px) rotateX(-90deg);
     animation: bus1 18s ease-in-out infinite;
 
-    background-image: url(bus.png);
+    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/bus.png);
     width: 63px;
     height: 38px;
 }
@@ -614,7 +614,7 @@
     width: 36px;
     height: 54px;
     margin: auto;
-    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/a0507209bea38cd984b986740abbc3759c7c7181/static/karon-musk.png);
+    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/karon-musk.png);
     animation: bus2 18s ease-in-out infinite, playX 1s steps(3) infinite;
 }
 
