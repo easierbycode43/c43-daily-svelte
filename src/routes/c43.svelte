@@ -2,7 +2,7 @@
   <div class='ground'>
 
     <!--   Sky   -->
-    <div class="sun">☀️</div>
+    <div class="sun"></div>
     <div class="cloud cloud-2">☁️</div>
     <div class="cloud cloud-1">☁️</div>
 
@@ -209,6 +209,10 @@
     transform-origin: initial;
     transform: translateZ(250px) rotateX(-100deg) rotateY(45deg) rotate(0deg);
     animation: sun 8s linear infinite;
+
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/c43-sun.png);
+    height: 90px;
+    width: 90px;
 }
 
 .cloud {
@@ -601,8 +605,11 @@
     transform: translate(650px, 490px) rotateX(-90deg);
     animation: bus1 18s ease-in-out infinite;
 
-    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/bus.png);
-    width: 63px;
+    // background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/bus.png);
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/minivan.png);
+    // width: 63px;
+    width: 111px;
+    // height: 38px;
     height: 38px;
 }
 
