@@ -349,6 +349,7 @@
         border-radius: 6px;
         margin-bottom: 10px;
         margin-top: 1em;
+        opacity: 0.85;
         background-size: 100% 3rem;
         position: relative;
         line-height: 3rem;
