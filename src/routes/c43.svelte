@@ -376,6 +376,7 @@
     width: 1057px;
     height: 185px;
     opacity: 0.65;
+    font-family: 'Teko';
 
     background-size: contain;
     box-shadow: 2px 2px #797780;
