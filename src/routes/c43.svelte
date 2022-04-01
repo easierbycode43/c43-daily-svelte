@@ -16,6 +16,9 @@
     <div class='c43-billboard'>
       Community 43
     </div>
+    <div class='c43-studios-billboard'>
+      C43 Studios
+    </div>
     <div class="c43-0">🏢</div>
     <div class="c43">🏢</div>
     <div class="c43-1">🏢</div>
@@ -366,6 +369,17 @@
     height: 66px;
     transform: translate3d(0, 240px, 90px) translate(190px, 240px) rotateX(-100deg);
     width: 120px;
+}
+
+.c43-studios-billboard {
+    background-image: url(https://thirsty.store/c43-daily-svelte/C43-Studios-logo.png);
+    width: 1057px;
+    height: 185px;
+    opacity: 0.65;
+
+    background-size: contain;
+    box-shadow: 2px 2px #797780;
+    transform: translate3d(0, 240px, 65px) rotateX(-100deg);
 }
 
 .computer {
