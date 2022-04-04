@@ -166,7 +166,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(#2bcaff, #77d9ff);
+    // background-image: linear-gradient(#2bcaff, #77d9ff);
+    background-image: linear-gradient(#eaeed8, #f7fbe5);
     perspective: 1000px;
     text-align: center;
     -webkit-user-select: none;
