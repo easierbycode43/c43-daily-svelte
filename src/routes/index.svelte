@@ -26,6 +26,7 @@
     import Watchmorningmeeting from './watchmorningmeeting.svelte';
     import Modal from './modal.svelte';
     import Icon from '@iconify/svelte';
+    import * as animateScroll from 'svelte-scrollto';
 
 
 
@@ -44,7 +45,7 @@
     let TV_MODE = false;
     
     onMount(async () => {
-        
+
         TV_MODE = new URL(window.location.href).searchParams.get('mode') == 'TV';
 
         if ( !TV_MODE )  document.body.style.background = "unset";

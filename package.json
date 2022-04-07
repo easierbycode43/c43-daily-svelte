@@ -24,6 +24,7 @@
   "dependencies": {
     "googleapis": "^91.0.0",
     "phaser": "^3.55.2",
-    "svelte-phaser": "^0.1.0-beta.2"
+    "svelte-phaser": "^0.1.0-beta.2",
+    "svelte-scrollto": "^0.2.0"
   }
 }
