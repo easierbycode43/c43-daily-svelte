@@ -674,9 +674,13 @@
     transform: translate3d(100px, 100px, 200px) rotateX(-90deg) rotateY(45deg);
     animation: helicopter 25s ease-in-out infinite;
 
-    width: 25px;
-    height: 21px;
-    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/heli.png);
+    // width: 25px;
+    // height: 21px;
+    // background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/heli.png);
+
+    width: 41px;
+    height: 54px;
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/orange-rage.png);
 }
 
 /* People */
