@@ -276,7 +276,7 @@
 		</h2>
 
 		<ol class="modal-list">
-            <li style='font-size: 14px'>
+            <li style='font-size: 36px; color: #9c4684;'>
                 <Icon style='color: #a2a2a2' icon="ic:baseline-access-time" />
                 &nbsp;
                 { eventSelected.start }    
