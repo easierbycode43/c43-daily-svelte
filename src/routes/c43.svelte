@@ -138,6 +138,7 @@
     <div class="person person-4">🐇</div>
     <div class="person person-5">🚶</div>
     <div class="person duaniac"></div>
+    <div class="microphone"></div>
 
     <!-- Animals -->
     <div class="dog dog-1">🐕</div>
@@ -753,11 +754,20 @@
 
 .duaniac {
     transform: translate(20px, 469px) rotateX(-90deg) rotateY(180deg);
-    animation: duaniac 40s linear infinite, duaniacPlayX 1s steps(3) infinite;
+    animation: rainbow 40s linear infinite, duaniac 40s linear infinite, duaniacPlayX 1s steps(3) infinite;
   
     background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/duaniac.png);
     width: 45px;
     height: 56px;
+}
+
+.microphone {
+    // transform: translate(20px, 469px) rotateX(-90deg) rotateY(180deg);
+    animation: rainbow 40s linear infinite, duaniac 40s linear infinite;
+  
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/microphone.png);
+    width: 58px;
+    height: 22px;
 }
 
 @keyframes duaniacPlayX {
