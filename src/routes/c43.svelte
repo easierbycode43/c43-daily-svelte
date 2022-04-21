@@ -671,11 +671,17 @@
     // transform: translate(20px, 470px) rotateX(-90deg) rotateY(180deg);
     // animation: bus2 18s ease-in-out infinite;
 
-    width: 36px;
-    height: 54px;
+    // width: 36px;
+    width: 15px;
+    height: 26px;
     margin: auto;
-    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/karon-musk.png);
-    animation: bus2 18s ease-in-out infinite, playX 1s steps(3) infinite;
+    // background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/karon-musk.png);
+    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/princess-emmy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // animation: bus2 18s ease-in-out infinite, playX 1s steps(3) infinite;
+    animation: bus2 18s ease-in-out infinite, playX 1s steps(2) infinite, rainbow 40s linear infinite;
+
 }
 
 @keyframes playX {
@@ -683,7 +689,9 @@
     background-position-x: 0px;
   }
   to {
-    background-position-x: 108px;
+    // background-position-x: 108px;
+    background-position-x: -30px;
+
   }
 }
 
