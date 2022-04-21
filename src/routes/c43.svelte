@@ -3,8 +3,8 @@
 
     <!--   Sky   -->
     <div class="sun"></div>
-    <div class="cloud cloud-2">☁️</div>
-    <div class="cloud cloud-1">☁️</div>
+    <div class="cloud cloud-2 rainbow"></div>
+    <div class="cloud cloud-1 rainbow"></div>
 
     <!--   Roads   -->
     <div class="road road-1"></div>
@@ -226,12 +226,26 @@
 
 .cloud-1 {
     transform: translate3d(150px, 150px, 200px) rotateX(-90deg);
-    animation: cloud1 40s ease-in-out infinite;
+    animation: cloud1 40s ease-in-out infinite, rainbow 40s linear infinite;
+
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/cloud-zoe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 24px;
+
 }
 
 .cloud-2 {
     transform: translate3d(500px, 250px, 220px) rotateX(-90deg);
-    animation: cloud2 40s ease-in-out infinite;
+    animation: cloud2 40s ease-in-out infinite, rainbow 40s linear infinite;
+    
+    background-image: url(https://raw.githubusercontent.com/easierbycode43/c43-daily-svelte/master/static/cloud-emma.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 24px;
+
 }
 
 /* Roads */
