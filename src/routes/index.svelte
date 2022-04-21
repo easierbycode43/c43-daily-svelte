@@ -70,15 +70,15 @@
         )
 	});
 
-    let leprechaunSpriteUrl = `${base}/bunny.png`;
+    let leprechaunSpriteUrl = `${base}/princess-emmy.png`;
 
     function preload( scene ) {
         scene.load.spritesheet(
             'leprechaun',
             leprechaunSpriteUrl,
             {
-                frameWidth: 45,
-                frameHeight: 42
+                frameWidth: 15,
+                frameHeight: 26
             }
         )
     }
