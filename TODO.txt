@@ -1,6 +1,7 @@
 NOW
 ===
 - add Lunch to calendar list
+  - during lunch, Akuma chef replaces cloud (from Puzzle Fighter)
   - at 10 till noon, show lunch menu (in modal?)
 
 
