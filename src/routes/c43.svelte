@@ -372,16 +372,38 @@
     width: 120px;
 }
 
+@keyframes rainbow {
+    45% {
+        filter: hue-rotate(162deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    95% {
+        filter: hue-rotate(342deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
 .c43-studios-billboard {
-    background-image: url(https://thirsty.store/c43-daily-svelte/C43-Studios-logo.png);
+    background-image: url(https://thirsty.store/c43-daily-svelte/barbie.png);
     width: 1057px;
     height: 185px;
     opacity: 0.65;
     font-family: 'Teko';
 
     background-size: contain;
-    box-shadow: 2px 2px #797780;
+    box-shadow: 2px 2px #ff60b0;
     transform: translate3d(0, 240px, 65px) rotateX(-100deg);
+
+    animation: rainbow 40s linear infinite;
+    filter: hue-rotate(0);
+
 }
 
 .computer {
