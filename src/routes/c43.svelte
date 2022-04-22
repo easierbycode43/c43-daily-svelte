@@ -153,9 +153,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :global(body) {
-    background: url(https://www.google.com/logos/doodles/2022/earth-day-2022-6753651837109391.2-lat.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: unset;
 }
 
 *,
@@ -408,7 +406,7 @@
 }
 
 .c43-studios-billboard {
-    background-image: url(https://thirsty.store/c43-daily-svelte/barbie.png);
+    background-image: url(https://www.google.com/logos/doodles/2022/earth-day-2022-6753651837109391.2-lat.webp);
     width: 1057px;
     height: 185px;
     opacity: 0.65;
