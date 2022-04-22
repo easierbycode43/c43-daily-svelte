@@ -153,7 +153,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :global(body) {
-    background: unset;
+    background: url(https://www.google.com/logos/doodles/2022/earth-day-2022-6753651837109391.2-lat.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 *,
@@ -168,7 +170,7 @@
     align-items: center;
     height: 100vh;
     // background-image: linear-gradient(#2bcaff, #77d9ff);
-    background-image: linear-gradient(#eaeed8, #f7fbe5);
+    // background-image: linear-gradient(#eaeed8, #f7fbe5);
     perspective: 1000px;
     text-align: center;
     -webkit-user-select: none;
