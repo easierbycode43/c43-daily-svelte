@@ -696,6 +696,16 @@
   }
 }
 
+// FOUNTAIN
+.fountain {
+    width: 90px;
+    height: 86px;
+    margin: auto;
+    background-image: url(https://github.com/easierbycode43/c43-daily-svelte/raw/master/static/fountain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .truck {
     font-size: 35px;
 }
